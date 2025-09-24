@@ -43207,3 +43207,152 @@ span.select2-selection.select2-selection--single:focus {
     max-width: 300px;
   }
 }
+
+.offer-section {
+  background: linear-gradient(135deg, #1c2d37, #132229);
+  color: #fff;
+  width: 100%;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 80px 15px;
+  transition: box-shadow 0.4s ease;
+}
+.offer-section:hover {
+  box-shadow: 0 0 40px rgba(176, 126, 80, 0.3);
+}
+
+/* Floating circles */
+.offer-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  animation: offer-float 10s ease-in-out infinite;
+  z-index: 0;
+}
+.offer-circle:nth-child(1) {
+  width: 140px; height: 140px;
+  top: 10%; left: 8%;
+  animation-delay: 0s;
+}
+.offer-circle:nth-child(2) {
+  width: 200px; height: 200px;
+  bottom: 15%; right: 12%;
+  animation-delay: 2s;
+}
+.offer-circle:nth-child(3) {
+  width: 100px; height: 100px;
+  top: 60%; left: 25%;
+  animation-delay: 4s;
+}
+@keyframes offer-float {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.8; }
+  25%  { transform: translate(12px, -12px) scale(1.05); opacity: 0.9; }
+  50%  { transform: translate(-12px, 12px) scale(1); opacity: 0.8; }
+  75%  { transform: translate(12px, -6px) scale(1.05); opacity: 0.9; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+}
+
+/* Title */
+.offer-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #e0b38c;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Offer split */
+.offer-split {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.offer-part {
+  text-align: center;
+}
+.offer-percent {
+  font-size: 3.5rem;
+  font-weight: 900;
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+
+  background: linear-gradient(90deg, #d4af7a 20%, #f1d3a1 50%, #d4af7a 80%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 25px rgba(212, 175, 122, 0.4);
+  animation: shine 3s linear infinite;
+}
+.offer-label {
+  display: block;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  margin-top: 6px;
+  letter-spacing: 1px;
+  color: #ddd;
+}
+.offer-divider {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #e0b38c;
+  line-height: 1;
+  margin: 0 10px;
+}
+
+
+/* Animations */
+@keyframes shine {
+  0%   { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.1); }
+}
+
+/* Text */
+.offer-text {
+  font-size: 1.15rem;
+  margin: 6px 0;
+  line-height: 1.6;
+  color: #f0f0f0;
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA Button */
+.offer-btn {
+  background: linear-gradient(135deg, #b07e50, #e0b38c);
+  border: none;
+  color: #103c3b;
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1.05rem;
+  box-shadow: 0 8px 20px rgba(176, 126, 80, 0.35);
+  position: relative;
+  z-index: 1;
+}
+.offer-btn:hover {
+  background: linear-gradient(135deg, #e0b38c, #b07e50);
+  transform: scale(1.08);
+  box-shadow: 0 12px 28px rgba(176, 126, 80, 0.55);
+}
