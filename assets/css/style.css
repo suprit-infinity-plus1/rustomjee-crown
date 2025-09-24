@@ -13979,9 +13979,9 @@ ul.comment-list .th-comment-item:first-child>.th-post-comment {
 
 /* Large devices */
 @media (max-width: 1199px) {
-  .hero-2 {
+  /* .hero-2 {
     padding-bottom: 120px;
-  }
+  } */
 
   .hero-2 .hero-slider-thumb-wrap {
     margin-right: 0;
@@ -14020,17 +14020,17 @@ ul.comment-list .th-comment-item:first-child>.th-post-comment {
 
 /* Medium devices */
 @media (max-width: 991px) {
-  .hero-2 {
+  /* .hero-2 {
     padding-bottom: 80px;
     margin-top: 0;
-  }
+  } */
 }
 
 /* Small devices */
 @media (max-width: 767px) {
-  .hero-2 {
+  /* .hero-2 {
     padding-bottom: 80px;
-  }
+  } */
 
   .hero-2 .hero-thumb2-1 {
     border-radius: 24px;
