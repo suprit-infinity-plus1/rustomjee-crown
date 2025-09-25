@@ -14071,6 +14071,16 @@ ul.comment-list .th-comment-item:first-child>.th-post-comment {
   height: 90vh;
   margin-top: 90px;
 }
+@media (max-width:768px){
+  .hero-3{
+    height: 75vh;
+  }
+}
+@media (max-width:576px){
+  .hero-3{
+    height: 40vh;
+  }
+}
 
 .hero-3:after {
   content: '';
