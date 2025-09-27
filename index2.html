@@ -39,6 +39,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css">
+
+    <link rel="stylesheet" href="https://res.cloudinary.com/aggtrans/raw/upload/v1751480492/css/the-12-column-grid.css">
 
     <!--==============================
 	    All CSS File
@@ -55,6 +58,9 @@
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
 </head>
 
@@ -155,9 +161,9 @@
             <!-- Main Menu Area -->
             <div class="menu-area">
                 <div class="container">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-auto">
-                            <div class="header-logo">
+                    <div class="row align-items-center justify-content-between m-0">
+                        <div class="col-auto p-0">
+                            <div class="header-logo p-0">
                                 <a href="index.html">
                                     <img src="assets/img/rustomjeeprive-logo.png" alt="Realar">
                                 </a>
@@ -576,6 +582,44 @@ Service Area
             </div>
         </div>
     </div>
+
+    <section class="container mx-auto space overflow-hidden">
+        <div class="row justify-content-start align-items-center">
+            <div class="col-xl-7 col-lg-8">
+                <div class="title-area mb-0">
+                    <span class="sub-title">Amenities</span>
+                    <h2 class="sec-title text-theme mb-0">Enhancing Everyday Living</h2>
+                    <p class="text-theme mb-0">Our community offers a curated range of modern amenities designed to
+                        bring
+                        comfort, convenience, and connection to your daily life—all within a sustainable and
+                        thoughtfully planned environment.</p>
+                </div>
+            </div>
+        </div>
+        <article class="row">
+            <div class="main-slider" style="background: #eee;padding: 20px;">
+
+                <a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="images">
+                    <img src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
+                </a>
+
+                <a href="https://farm6.staticflickr.com/5551/31096145856_793c69283a_k_d.jpg" data-fancybox="images">
+                    <img src="https://farm6.staticflickr.com/5551/31096145856_4915afb23e_m_d.jpg" />
+                </a>
+
+                <a href="https://c1.staticflickr.com/1/357/31876784275_12286240d4_h.jpg" data-fancybox="images">
+                    <img src="https://c1.staticflickr.com/1/357/31876784275_fbc9696913_m.jpg" />
+                </a>
+
+                <a href="https://farm1.staticflickr.com/582/32752534825_4b35b2df81_o_d.jpg" data-fancybox="images">
+                    <img src="https://farm1.staticflickr.com/582/32752534825_c25321a594_m_d.jpg" />
+                </a>
+
+            </div>
+
+        </article>
+    </section>
+
     <!--==============================
 Appointment Area   
 ==============================-->
@@ -707,7 +751,15 @@ Appointment Area
                 </div>
             </div>
         </div>
-    </div><!--==============================
+    </div>
+
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.126406920864!2d72.84803785!3d19.058179100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c967eab026c3%3A0xfcc150799b865d35!2sRustomjee%20Prive!5e0!3m2!1sen!2sin!4v1758956554627!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!--==============================
 	Footer Area
 ==============================-->
     <footer class="footer-wrapper footer-layout2 bg-white">
@@ -816,7 +868,8 @@ Appointment Area
                 <div class="row gy-2 align-items-center">
                     <div class="col-lg-6">
                         <p class="copyright-text">
-                            Copyright <i class="fal fa-copyright"></i> 2025 <a href="index.html">Rustomjee Prive</a>, All rights
+                            Copyright <i class="fal fa-copyright"></i> 2025 <a href="index.html">Rustomjee Prive</a>,
+                            All rights
                             reserved.</p>
                     </div>
                     <div class="col-lg-6 text-center text-lg-end">
@@ -878,6 +931,38 @@ Appointment Area
 
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Fancybox v6 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            // Init slick
+            $('.main-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                arrows: true,
+                dots: true
+            });
+        });
+
+        // Init fancybox v6
+        Fancybox.bind("[data-fancybox='images']", {
+            Thumbs: true,
+            Toolbar: true,
+            Carousel: {
+                infinite: true
+            }
+        });
+    </script>
+
 </body>
 
 </html>
