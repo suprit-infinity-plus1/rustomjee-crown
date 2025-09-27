@@ -14071,13 +14071,15 @@ ul.comment-list .th-comment-item:first-child>.th-post-comment {
   height: 90vh;
   margin-top: 90px;
 }
-@media (max-width:768px){
-  .hero-3{
+
+@media (max-width:768px) {
+  .hero-3 {
     height: 75vh;
   }
 }
-@media (max-width:576px){
-  .hero-3{
+
+@media (max-width:576px) {
+  .hero-3 {
     height: 40vh;
   }
 }
@@ -34039,7 +34041,8 @@ span.select2-selection.select2-selection--single:focus {
   inset: 0;
   -webkit-clip-path: path("M272 42H13.96C43.62 42 72.92 32.72 100.1 14.92C127.22 -4.31 158.99 -4.31 186.16 14.92C213.34 32.72 242.64 42 272 42Z");
   clip-path: path("M272 42H13.96C43.62 42 72.92 32.72 100.1 14.92C127.22 -4.31 158.99 -4.31 186.16 14.92C213.34 32.72 242.64 42 272 42Z");
-  background-color: var(--theme-color);
+  /* background-color: var(--theme-color); */
+  background-color: white;
   text-align: center;
   z-index: -1;
 }
@@ -34047,7 +34050,7 @@ span.select2-selection.select2-selection--single:focus {
 .hero-scroll-down12 .hero-scroll-wrap {
   height: 40px;
   width: 20px;
-  border: 1px solid var(--white-color);
+  border: 1px solid black;
   display: inline-block;
   border-radius: 30px;
   position: relative;
@@ -34059,7 +34062,8 @@ span.select2-selection.select2-selection--single:focus {
   height: 10px;
   width: 1px;
   border-radius: 50px;
-  background-color: var(--white-color);
+  /* background-color: var(--white-color); */
+  background-color: black;
   position: absolute;
   top: 50%;
   left: 50%;
