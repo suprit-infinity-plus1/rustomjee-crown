@@ -2,7 +2,6 @@
 <!-- SweetAlert2 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
-
 <style>
   body {
     font-family: sans-serif;
@@ -13,11 +12,14 @@
     background-color: cadetblue;
     color: whitesmoke;
     border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
     font-size: 18px;
     font-weight: 500;
     border-radius: 7px;
     padding: 15px 35px;
     cursor: pointer;
+    white-space: nowrap;
     margin: 10px;
   }
 
@@ -27,8 +29,10 @@
 
   input[type="text"] {
     padding: 12px 20px;
+    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 10px;
+    box-sizing: border-box;
   }
 
   h1 {
@@ -55,8 +59,9 @@
     background: grey;
   }
 </style>
-
 <button style="display:none" id="success">Success</button>
+
+
 
 <?php
 ini_set('display_errors', 1);
@@ -70,85 +75,112 @@ require 'vendor/phpmailer/phpmailer/src/Exception.php';
 require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 
 // Start session
-// session_start();  // Only if needed elsewhere
+// session_start();
 
-// Initialize PHPMailer
-$mail = new PHPMailer();
-$mail->SMTPDebug = 0;
-$mail->isSMTP();
-$mail->Host = "mail.rustomjee.in.net";
-$mail->Port = 465;
-$mail->SMTPSecure = 'ssl';
-$mail->SMTPAuth = true;
-$mail->Username = 'info_crown@rustomjee.in.net'; // Update if required
-$mail->Password = 'Ld^R{Xw9KAH=';  // Replace with actual password
-$mail->IsHTML(true);
-$mail->setFrom('info_crown@rustomjee.in.net', 'Rustomjee Crown');
+// Check for reCAPTCHA response
+// if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+//   $secretKey = "6LfvuIArAAAAALvE_bp7fd5FgG_tlmMc1fjCNjsW";
+//   $ip = $_SERVER['REMOTE_ADDR'];
+//   $response = $_POST['g-recaptcha-response'];
+//   $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=$ip";
+//   $fire = file_get_contents($url);
+//   $data = json_decode($fire);
+//   if ($data->success == true) {
+    // Initialize PHPMailer
+    $mail = new PHPMailer();
+    $mail->SMTPDebug = 0;
+    $mail->Host = "mail.rustomjee.in.net";
+    $mail->Port = 465;
+    $mail->IsHTML(true);
+    $mail->Username = 'info@rustomjee.in.net';
+    $mail->Password = 'VNGr?t1mG^JM'; 
+    $mail->setFrom('info@rustomjee.in.net', 'crown');
 
-// Add recipients
-$mail->addBCC('sanjaresolutions@gmail.com', 'sanjaresolutions');
-// $mail->addBCC('nathuramvarande@gmail.com', 'nathuram');
-// $mail->addBCC('mirzafaizan1931@gmail.com', 'Faizan Mirza');
-$mail->addAddress('supritdagade77@gmail.com', 'suprit');
-$mail->Subject = 'Contact form submitted data.';
+    // Add recipients
+    $mail->addBCC('sanjaresolutions@gmail.com', 'sanjaresolutions');
+    // $mail->addBCC('mirzafaizan1931@gmail.com', 'Faizan Mirza');
 
-// Gather form data
-$name = $_POST['name'] ?? '';
-$email = $_POST['email'] ?? '';
-$phone = $_POST['phone'] ?? '';
-$message = $_POST['message'] ?? '';
+    $mail->addBCC('info_crown@rustomjee.in.net', 'crown');
+    // $mail->addAddress(' supritdagade77@gmail.com', 'suprit');
+    // $mail->Subject = 'Contact form submitted data.';
 
-// Prepare email content
-$html = "<table style='width: 100%;border: 2px solid black;border-collapse: collapse;'><tr>";
-if (!empty($name)) $html .= "<th style='border: 2px solid black;'>Enter your Name</th>";
-if (!empty($email)) $html .= "<th style='border: 2px solid black;'>Enter your Email</th>";
-if (!empty($phone)) $html .= "<th style='border: 2px solid black;'>Enter your Mobile Number</th>";
-if (!empty($message)) $html .= "<th style='border: 2px solid black;'>Enter your Message</th>";
-$html .= "</tr><tr>";
-if (!empty($name)) $html .= "<td style='border: 2px solid black;'>$name</td>";
-if (!empty($email)) $html .= "<td style='border: 2px solid black;'>$email</td>";
-if (!empty($phone)) $html .= "<td style='border: 2px solid black;'>$phone</td>";
-if (!empty($message)) $html .= "<td style='border: 2px solid black;'>$message</td>";
-$html .= "</tr></table>";
+    // Gather form data
 
-// Send data to CRM
-$curl = curl_init();
-curl_setopt_array($curl, array(
-    CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => 'https://sanjarcrm.com/api/leads/submit',
-    CURLOPT_POST => 1,
-    CURLOPT_POSTFIELDS => array(
-        'name' => $name,
-        'contact' => $phone,
-        'message' => $message,
-        'email' => $email,
-        'extra' => 'bloomivf.in.net',
-        'table_alias' => 'bloomivfgroup_in',
-        'api_key' => '1eca48c1d63b9ddcbb555ef9a0b6c602',
-    )
-));
-$resp = curl_exec($curl);
-curl_close($curl);
+    $_SESSION["redirection"] = "done";
+    $name = ($_POST['name'] != '') ? $_POST['name'] : '';
+    $email = ($_POST['email'] != '') ? $_POST['email'] : '';
+    $phone = ($_POST['phone'] != '') ? $_POST['phone'] : '';
+    $message = $_POST['message'] ?? '';
+    $subject = $_POST['subject'] ?? 'Crown Enquiry';
 
-// Send email
-$mail->msgHTML($html);
-$mail->AltBody = 'This is a plain-text message body';
+    $mail->Subject = "Contact form submission: " . $subject;
 
-if (!$mail->send()) {
-    echo "
-    <script type=\"text/javascript\">
-        swal('Failed', 'Your mail could not be sent. <b style=color:red>Try Again</b>', 'error');
-    </script>";
-} else {
-    echo "
-    <script type=\"text/javascript\">
-        swal('Success', 'Your mail has been sent <b style=color:green>Successfully</b>', 'success');
-    </script>";
-}
+    // Prepare email content
+    $html = "  
+        <table style='width: 100%;border: 2px solid black;border-collapse: collapse;'>
+        <tr style='width: 100%;border: 2px solid black;'>";
+    if (!empty($name)) {
+      $html .= "     <th style='width: 20%;border: 2px solid black;'>Enter your Name</th>";
+    }
+    if (!empty($email)) {
+      $html .= "      <th style='width: 20%;border: 2px solid black;'>Enter your Email</th>";
+    }
+    if (!empty($phone)) {
+      $html .= "      <th style='width: 20%;border: 2px solid black;'>Enter your Mobile Number</th>";
+    }
+    if (!empty($message)) {
+      $html .= "      <th style='width: 20%;border: 2px solid black;'>Enter your Message</th>";
+    }
+    $html .= "    
+        </tr>
+        <tr style='width: 100%;border: 2px solid black;'>";
+    if (!empty($name)) {
+      $html .= "     <th style='width: 20%;border: 2px solid black;'>" . $name . "</th>";
+    }
+    if (!empty($email)) {
+      $html .= "     <th style='width: 20%;border: 2px solid black;'>" . $email . "</th>";
+    }
+    if (!empty($phone)) {
+      $html .= "     <th style='width: 20%;border: 2px solid black;'>" . $phone . "</th>";
+    }
+    if (!empty($message)) {
+      $html .= "     <th style='width: 20%;border: 2px solid black;'>" . $message . "</th>";
+    }
+    $html .= "         </tr>
+                </table>";
+
+
+    // Prepare email message
+    $mail->msgHTML($html);
+    $mail->AltBody = 'This is a plain-text message body';
+
+    if (!$mail->send()) {
+        echo "
+            <script type=\"text/javascript\">
+                swal(
+                    'Error',
+                    'Your email could not be sent. Please try again later.',
+                    'error'
+                );
+            </script>
+        ";
+    } else {
+        echo "
+            <script type=\"text/javascript\">
+                swal(
+                    'Success',
+                    'Your email has been sent successfully!',
+                    'success'
+                );
+            </script>
+        ";
+    }
 ?>
 
+
 <script>
-  $('body').click(function() {
-    window.location = "http://bloomivf.in/";
+  $('body').click(function () {
+    // window.location = "https://  .com/demo";
+    window.location = "https://rustomjee.in.net/crown-prabhadevi/index.html";
   });
 </script>

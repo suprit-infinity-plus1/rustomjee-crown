@@ -39,13 +39,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css">
-
-    <link rel="stylesheet" href="https://res.cloudinary.com/aggtrans/raw/upload/v1751480492/css/the-12-column-grid.css">
 
     <!--==============================
 	    All CSS File
 	============================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Fontawesome Icon -->
@@ -58,10 +56,6 @@
     <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-
 </head>
 
 <body class="">
@@ -161,9 +155,9 @@
             <!-- Main Menu Area -->
             <div class="menu-area">
                 <div class="container">
-                    <div class="row align-items-center justify-content-between m-0">
-                        <div class="col-auto p-0">
-                            <div class="header-logo p-0">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-logo">
                                 <a href="index.html">
                                     <img src="assets/img/rustomjeeprive-logo.png" alt="Realar">
                                 </a>
@@ -215,7 +209,8 @@
                         </div>
                         <div class="col-auto d-none d-xxl-block">
                             <div class="header-button">
-                                <a href="contact.html" class="th-btn style2 th-btn-icon">Contact Us</a>
+                                <a href="javascript:void(0)" class="th-btn style2 th-btn-icon" data-bs-toggle="modal"
+                                    data-bs-target="#enquireModal">Connect Now</a>
                             </div>
                         </div>
                     </div>
@@ -280,7 +275,8 @@ About Area
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="img1">
-                                            <img src="assets/img/normal/about_2_1.png" alt="About">
+                                            <img src="assets/img/rustomjee-prive/about/about-kids-play-area.jpg"
+                                                alt="About">
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -410,9 +406,14 @@ Service Area
                     <div class="title-area">
                         <span class="sub-title">Amenities</span>
                         <h2 class="sec-title text-theme">Enhancing Everyday Living</h2>
-                        <p class="text-theme">Our community offers a curated range of modern amenities designed to bring
-                            comfort, convenience, and connection to your daily life—all within a sustainable and
-                            thoughtfully planned environment.</p>
+                        <p class="text-theme">
+                            At <strong>Rustomjee Prive, Kala Nagar BKC</strong>, residents enjoy a lifestyle crafted for
+                            comfort and leisure.
+                            Amenities include a swimming pool, fitness centre, landscaped gardens, kids’ play areas, and
+                            rooftop spaces
+                            like a yoga deck and sky lounge—all supported by 24/7 security and concierge services.
+                        </p>
+
                     </div>
                 </div>
             </div>
@@ -563,7 +564,7 @@ Service Area
 
     <div class="th-hero-wrapper hero-13 bg-title-dark" id="hero">
         <div class="container">
-            <div class="text-center">
+            <div class="hero-style13 text-center">
                 <h4 class="hero-subtitle">Don’t Missed Out</h4>
                 <h1 class="hero-title text-white">
                     <span class="title">
@@ -577,49 +578,126 @@ Service Area
                     most sought-after districts of the city.</p>
                 <div class="star-rating"></div>
                 <div class="btn-wrap justify-content-center">
-                    <a href="contact.html" class="th-btn style5 th-btn-icon">Request A Visit</a>
+                    <a href="javascript:void(0)" class="th-btn style5 th-btn-icon" data-bs-toggle="modal"
+                        data-bs-target="#enquireModal">Connect Now</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="container mx-auto space overflow-hidden">
-        <div class="row justify-content-start align-items-center">
-            <div class="col-xl-7 col-lg-8">
-                <div class="title-area mb-0">
-                    <span class="sub-title">Amenities</span>
-                    <h2 class="sec-title text-theme mb-0">Enhancing Everyday Living</h2>
-                    <p class="text-theme mb-0">Our community offers a curated range of modern amenities designed to
-                        bring
-                        comfort, convenience, and connection to your daily life—all within a sustainable and
-                        thoughtfully planned environment.</p>
+    <section class="space overflow-hidden">
+        <div class="container">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="title-area ">
+                        <span class="sub-title">Gallery</span>
+                        <h2 class="sec-title text-theme ">A Glimpse Into Rustomjee Prive</h2>
+                        <p class="text-theme">
+                            Discover the lifestyle and spaces that define <strong>Rustomjee Prive, Kala Nagar
+                                BKC</strong> from modern
+                            amenities to thoughtfully designed environments, all captured in our curated gallery.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <article class="row">
-            <div class="main-slider" style="background: #eee;padding: 20px;">
-
-                <a href="https://c2.staticflickr.com/6/5499/30972532232_051e1dc57e_h.jpg" data-fancybox="images">
-                    <img src="https://c2.staticflickr.com/6/5499/30972532232_e9a298a0c5_m.jpg" />
-                </a>
-
-                <a href="https://farm6.staticflickr.com/5551/31096145856_793c69283a_k_d.jpg" data-fancybox="images">
-                    <img src="https://farm6.staticflickr.com/5551/31096145856_4915afb23e_m_d.jpg" />
-                </a>
-
-                <a href="https://c1.staticflickr.com/1/357/31876784275_12286240d4_h.jpg" data-fancybox="images">
-                    <img src="https://c1.staticflickr.com/1/357/31876784275_fbc9696913_m.jpg" />
-                </a>
-
-                <a href="https://farm1.staticflickr.com/582/32752534825_4b35b2df81_o_d.jpg" data-fancybox="images">
-                    <img src="https://farm1.staticflickr.com/582/32752534825_c25321a594_m_d.jpg" />
-                </a>
-
+        <div class="container">
+            <div class="swiper property-gallery-slider-1" id="property-gallery-slider-1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="https://bit.ly/34MdBRc" data-fancybox="gallery"
+                                    data-caption="Caption Images 1">
+                                    <img src="https://bit.ly/34MdBRc" alt="Image Gallery">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="https://bit.ly/2Nv9zHh" data-fancybox="gallery"
+                                    data-caption="Caption Images 1">
+                                    <img src="https://bit.ly/2Nv9zHh" alt="Image Gallery">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="https://bit.ly/2q0iuay" data-fancybox="gallery"
+                                    data-caption="Caption Images 1">
+                                    <img src="https://bit.ly/2q0iuay" alt="Image Gallery">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="https://bit.ly/34PEofp" data-fancybox="gallery"
+                                    data-caption="Caption Images 1">
+                                    <img src="https://bit.ly/34PEofp" alt="Image Gallery">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="https://bit.ly/2X4z711" data-fancybox="gallery"
+                                    data-caption="Caption Images 1">
+                                    <img src="https://bit.ly/2X4z711" alt="Image Gallery">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="https://bit.ly/2rtIqMl" data-fancybox="gallery"
+                                    data-caption="Caption Images 1">
+                                    <img src="https://bit.ly/2rtIqMl" alt="Image Gallery">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="https://bit.ly/33xTVAn" data-fancybox="gallery"
+                                    data-caption="Caption Images 1">
+                                    <img src="https://bit.ly/33xTVAn" alt="Image Gallery">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="https://bit.ly/2K3jaDa" data-fancybox="gallery"
+                                    data-caption="Caption Images 1">
+                                    <img src="https://bit.ly/2K3jaDa" alt="Image Gallery">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-image">
+                                <a href="https://bit.ly/2WZ3fe2" data-fancybox="gallery"
+                                    data-caption="Caption Images 1">
+                                    <img src="https://bit.ly/2WZ3fe2" alt="Image Gallery">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-        </article>
+        </div>
     </section>
-
     <!--==============================
 Appointment Area   
 ==============================-->
@@ -633,7 +711,7 @@ Appointment Area
                 </div>
                 <div class="col-lg-7">
                     <div class="title-area mb-35">
-                        <h2 class="sec-title text-white">Book Business Solutions</h2>
+                        <h2 class="sec-title text-white">Enquire Now</h2>
                     </div>
                     <form action="mail.php" method="POST" class="appointment-form ajax-contact me-xl-5">
                         <div class="row">
@@ -647,14 +725,9 @@ Appointment Area
                                 <i class="fal fa-envelope"></i>
                             </div>
                             <div class="form-group style-border3 col-md-12">
-                                <select name="subject" id="subject" class="form-select">
-                                    <option value="" disabled selected hidden>Select Service Type</option>
-                                    <option value="Real Estate">Real Estate</option>
-                                    <option value="Apartment">Apartment</option>
-                                    <option value="Residencial">Residencial</option>
-                                    <option value="Deluxe">Deluxe</option>
-                                </select>
-                                <i class="fal fa-angle-down"></i>
+                                <input type="tel" class="form-control" name="phone" id="phone"
+                                    placeholder="Your Phone*">
+                                <i class="fal fa-phone"></i>
                             </div>
                             <div class="col-12 form-group style-border3">
                                 <i class="far fa-comments"></i>
@@ -886,6 +959,56 @@ Appointment Area
         </div>
     </footer>
 
+
+    <div class="modal fade" id="enquireModal" tabindex="-1" aria-labelledby="enquireModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content bg-title-dark border-0 shadow-lg rounded-3" style="max-width:500px; margin:auto;">
+
+                <div class="modal-body p-4">
+                    <div class="modal-header border-0 pt-0">
+                        <h5 class="form-title text-white m-0">Enquire Now</h5>
+                        <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close"
+                            style="font-size:2rem; line-height:1; background:none; border:0;">
+                            &times;
+                        </button>
+
+                    </div>
+                    <!-- your exact form -->
+                    <form class="appointment-form ajax-contact" action="email.php" method="post">
+                        <div class="row">
+                            <div class="form-group style-border3 col-12 mb-3">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*">
+                                <i class="fal fa-user"></i>
+                            </div>
+                            <div class="form-group style-border3 col-12 mb-3">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Your Email*">
+                                <i class="fal fa-envelope"></i>
+                            </div>
+                            <div class="form-group style-border3 col-12 mb-3">
+                                <input type="tel" class="form-control" name="phone" id="phone"
+                                    placeholder="Your Phone*">
+                                <i class="fal fa-phone"></i>
+                            </div>
+                            <div class="col-12 form-group style-border3 mb-3">
+                                <i class="far fa-comments"></i>
+                                <textarea placeholder="Type Your Message" name="message"
+                                    class="form-control"></textarea>
+                            </div>
+                            <div class="col-12 form-btn">
+                                <button class="th-btn style-border">
+                                    Submit Message
+                                    <span class="btn-icon"><img src="assets/img/icon/paper-plane.svg" alt="img"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="form-messages mb-0 mt-3"></p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!--********************************
 			Code End  Here 
 	******************************** -->
@@ -931,38 +1054,43 @@ Appointment Area
 
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <!-- Fancybox v6 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
     <script>
-        $(document).ready(function () {
-            // Init slick
-            $('.main-slider').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1000,
-                arrows: true,
-                dots: true
-            });
+        $('[data-fancybox="gallery"]').fancybox({
+            buttons: [
+                "slideShow",
+                "thumbs",
+                "zoom",
+                "fullScreen",
+                "share",
+                "close"
+            ],
+            loop: false,
+            protect: true
         });
-
-        // Init fancybox v6
-        Fancybox.bind("[data-fancybox='images']", {
-            Thumbs: true,
-            Toolbar: true,
-            Carousel: {
-                infinite: true
-            }
+        var swiper = new Swiper('#property-gallery-slider-1', {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            breakpoints: {
+                0: {  // default for small screens
+                    slidesPerView: 1,
+                },
+                576: {  // from 576px and up
+                    slidesPerView: 2,
+                },
+                768: {  // from 576px and up
+                    slidesPerView: 3,
+                }
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
         });
     </script>
-
 </body>
 
 </html>
