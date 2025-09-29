@@ -43419,3 +43419,8 @@ span.select2-selection.select2-selection--single:focus {
   transform: scale(1.08);
   box-shadow: 0 12px 28px rgba(176, 126, 80, 0.55);
 }
+
+#hero .hero-title.text-white {
+  /* background-color: red; */
+  text-shadow: 0px 0px 30px rgb(255, 251, 0);
+}
