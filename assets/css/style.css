@@ -43453,3 +43453,45 @@ span.select2-selection.select2-selection--single:focus {
   display: inline-block;
   padding-bottom: 80px; 
 } */
+.whatsapp-floating-btn {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  background-color: #21c061;
+  border-radius: 25px;
+  border: 2px solid var(--theme-color);
+
+  z-index: 10;
+}
+
+.whatsapp-btn {
+  /* color: var(--theme-color); */
+  color: white;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#floor-plan .portfolio-img,
+#unit-plan .portfolio-img {
+  position: relative;
+}
+
+#floor-plan .portfolio-img .image-overlay,
+#unit-plan .portfolio-img .image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: calc(100% - 50px);
+  width: calc(100% - 50px);
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(28, 45, 55, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
