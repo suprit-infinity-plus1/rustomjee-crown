@@ -808,6 +808,7 @@ Appointment Area
                                     <i class="far fa-comments"></i>
                                     <textarea placeholder="Type Your Message" class="form-control"></textarea>
                                 </div>
+                                <input type="hidden" name="subject" value="Prive Enquiry">
                                 <div class="col-12 form-btn mt-4">
                                     <button class="th-btn style-border">Submit Message <span class="btn-icon"><img
                                                 src="assets/img/icon/paper-plane.svg" alt="img"></span></button>
@@ -1101,7 +1102,7 @@ Appointment Area
 
                     </div>
                     <!-- your exact form -->
-                    <form class="appointment-form ajax-contact" action="email.php" method="post">
+                    <form class="appointment-form ajax-contact" action="../email.php" method="post">
                         <div class="row">
                             <div class="form-group style-border3 col-12 mb-3">
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*">
@@ -1122,6 +1123,7 @@ Appointment Area
                                 <textarea placeholder="Type Your Message" name="message"
                                     class="form-control"></textarea>
                             </div>
+                            <input type="hidden" name="subject" value="Prive Enquiry">
                             <div class="col-12 form-btn">
                                 <button class="th-btn style-border">
                                     Submit Message
