@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
@@ -26,7 +26,9 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png"> -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/prive/logo/rustomjee-favicon.png">
+
     <link rel="manifest" href="assets/img/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
@@ -68,7 +70,7 @@
     <!--********************************
    		Code Start From Here 
 	******************************** -->
-    <div class="cursor-follower"></div>
+    <div class="cursor-follower d-none d-md-block"></div>
 
     <!-- slider drag cursor -->
     <div class="slider-drag-cursor"><i class="fas fa-angle-left me-2"></i> DRAG <i class="fas fa-angle-right ms-2"></i>
@@ -226,7 +228,7 @@
 Hero Area
 ==============================-->
     <!-- <div class="th-hero-wrapper hero-12" id="hero" data-bg-src="assets/img/hero/hero_bg_12_1.jpg"> -->
-    <div class="th-hero-wrapper hero-12" id="hero" data-bg-src="assets/img/prive/banner/prive-banner-img.png">
+    <!-- <div class="th-hero-wrapper hero-12" id="hero" data-bg-src="assets/img/prive/banner/prive-banner-img.png">
         <div class="container">
             <div class="hero-style12 text-center">
                 <h1 class="hero-title text-theme2">
@@ -241,16 +243,73 @@ Hero Area
                 </div>
             </div>
         </div>
-        <!-- <div class="slider-area">
-            <div class="swiper hero-slider12" id="heroSlide12">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" data-bg-src="assets/img/hero/hero_bg_12_1.jpg">
+    </div> -->
 
+    <!-- Swiper -->
+    <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="th-hero-wrapper hero-12" id="hero"
+                    data-bg-src="assets/img/prive/banner/prive-banner-img.png">
+                    <div class="container">
+                        <div class="hero-style12 text-center">
+                            <h1 class="hero-title text-theme2">
+                                <span class="title text-capitalize">Find balance</span>
+                                <span class="title text-capitalize">where skyline meets serenity</span>
+                            </h1>
+                            <div class="btn-wrap justify-content-center">
+                                <a href="javascript:void(0)" class="th-btn style5 th-btn-icon" data-bs-toggle="modal"
+                                    data-bs-target="#enquireModal">Enquire Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <!-- <div class="swiper-slide">
+            <div class="th-hero-wrapper hero-12" data-bg-src="assets/img/hero/hero_bg_12_1.jpg">
+                <div class="container">
+                    <div class="hero-style12 text-center">
+                        <h1 class="hero-title text-theme2">
+                            <span class="title text-capitalize">Find balance</span>
+                            <span class="title text-capitalize">where skyline meets serenity</span>
+                        </h1>
+                        <div class="btn-wrap justify-content-center">
+                            <a href="javascript:void(0)" class="th-btn style5 th-btn-icon" data-bs-toggle="modal"
+                                data-bs-target="#enquireModal">Enquire Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div> -->
+
+            <!-- Slide 3 -->
+            <!-- <div class="swiper-slide">
+            <div class="th-hero-wrapper hero-12" data-bg-src="assets/img/hero/hero_bg_12_2.jpg">
+                <div class="container">
+                    <div class="hero-style12 text-center">
+                        <h1 class="hero-title text-theme2">
+                            <span class="title text-capitalize">Find balance</span>
+                            <span class="title text-capitalize">where skyline meets serenity</span>
+                        </h1>
+                        <div class="btn-wrap justify-content-center">
+                            <a href="javascript:void(0)" class="th-btn style5 th-btn-icon" data-bs-toggle="modal"
+                                data-bs-target="#enquireModal">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        </div>
+
+        <!-- Swiper Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
+
     <div class="hero-scroll-downindex2">
         <div class="scroll-down">
             <a href="#about" class="hero-scroll-wrap"></a>
@@ -568,6 +627,218 @@ Amenities
         </div>
     </section>
 
+
+    <!-- ======================== Floor Plan ============================ -->
+
+    <section id="floor-plan" class="space overflow-hidden">
+        <div class="container">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="title-area">
+                        <span class="sub-title">Floor Plan</span>
+                        <h2 class="sec-title text-theme">Explore Our Floor Plans</h2>
+                        <p class="text-theme">
+                            Discover the lifestyle and spaces that define
+                            <strong>Rustomjee Prive, Kala Nagar BKC</strong> from modern
+                            amenities to thoughtfully designed environments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="swiper property-floorplan-slider" id="property-floorplan-slider">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="card text-center border-0 position-relative">
+                            <div class="position-relative">
+                                <img src="assets/img/prive/gallery/3.png" class="card-img-top" alt="Ground Floor Plan">
+
+                                <!-- Overlay button -->
+                                <div class="prive-image-overlay">
+                                    <a href="javascript:void(0)" class="th-btn style-border prive-new-btn"
+                                        data-bs-toggle="modal" data-bs-target="#enquireModal">
+                                        Get A Plan
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="card-body p-2">
+                                <h5 class="card-title prive-floor-plan-title fw-semibold mb-0">Ground Floor Plan</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="card text-center border-0">
+                            <div class="position-relative">
+
+                                <img src="assets/img/prive/gallery/4.png" class="card-img-top"
+                                    alt="1st Basement Floor Plan">
+                                <!-- Overlay button -->
+                                <div class="prive-image-overlay">
+                                    <a href="javascript:void(0)" class="th-btn style-border prive-new-btn"
+                                        data-bs-toggle="modal" data-bs-target="#enquireModal">
+                                        Get A Plan
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="card-body p-2">
+                                <h5 class="card-title prive-floor-plan-title fw-semibold mb-0">1st Basement Floor Plan</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="card text-center border-0">
+                            <div class="position-relative">
+                                <img src="assets/img/prive/gallery/5.png" class="card-img-top"
+                                    alt="2nd Basement Floor Plan">
+    
+                                <!-- Overlay button -->
+                                <div class="prive-image-overlay">
+                                    <a href="javascript:void(0)" class="th-btn style-border prive-new-btn"
+                                        data-bs-toggle="modal" data-bs-target="#enquireModal">
+                                        Get A Plan
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body p-2">
+                                <h5 class="card-title prive-floor-plan-title fw-semibold mb-0">2nd Basement Floor Plan</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="card text-center border-0">
+                            <div class="position-relative">
+                                <img src="assets/img/prive/gallery/6.png" class="card-img-top" alt="2nd Podium Floor Plan">
+                                <!-- Overlay button -->
+                                <div class="prive-image-overlay">
+                                    <a href="javascript:void(0)" class="th-btn style-border prive-new-btn"
+                                        data-bs-toggle="modal" data-bs-target="#enquireModal">
+                                        Get A Plan
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body p-2">
+                                <h5 class="card-title prive-floor-plan-title fw-semibold mb-0">1st Podium Floor Plan</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="card text-center border-0">
+                            <div class="position-relative">
+                                <img src="assets/img/prive/gallery/7.png" class="card-img-top" alt="2nd Podium Floor Plan">
+    
+                                <!-- Overlay button -->
+                                <div class="prive-image-overlay">
+                                    <a href="javascript:void(0)" class="th-btn style-border prive-new-btn"
+                                        data-bs-toggle="modal" data-bs-target="#enquireModal">
+                                        Get A Plan
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body p-2">
+                                <h5 class="card-title prive-floor-plan-title fw-semibold mb-0">2nd Podium Floor Plan</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                        <div class="card text-center border-0">
+                            <div class="position-relative">
+                                <img src="assets/img/prive/gallery/7.png" class="card-img-top" alt="3rd Podium Floor Plan">
+    
+                                <!-- Overlay button -->
+                                <div class="prive-image-overlay">
+                                    <a href="javascript:void(0)" class="th-btn style-border prive-new-btn"
+                                        data-bs-toggle="modal" data-bs-target="#enquireModal">
+                                        Get A Plan
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body p-2">
+                                <h5 class="card-title prive-floor-plan-title fw-semibold mb-0">3rd Podium Floor Plan</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="swiper-slide">
+                        <div class="card text-center border-0">
+                            <div class="position-relative">
+                                <img src="assets/img/prive/gallery/9.png" class="card-img-top" alt="Terrace Floor Plan">
+    
+                                <!-- Overlay button -->
+                                <div class="prive-image-overlay">
+                                    <a href="javascript:void(0)" class="th-btn style-border prive-new-btn"
+                                        data-bs-toggle="modal" data-bs-target="#enquireModal">
+                                        Get A Plan
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body p-2">
+                                <h5 class="card-title prive-floor-plan-title fw-semibold mb-0">Terrace Floor Plan</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 8 -->
+                    <div class="swiper-slide">
+                        <div class="card text-center border-0">
+                            <div class="position-relative">
+                                <img src="assets/img/prive/gallery/10.png" class="card-img-top" alt="E-Deck Floor Plan">
+    
+                                <!-- Overlay button -->
+                                <div class="prive-image-overlay">
+                                    <a href="javascript:void(0)" class="th-btn style-border prive-new-btn"
+                                        data-bs-toggle="modal" data-bs-target="#enquireModal">
+                                        Get A Plan
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body p-2">
+                                <h5 class="card-title prive-floor-plan-title fw-semibold mb-0">E-Deck Floor Plan</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 9 -->
+                    <div class="swiper-slide">
+                        <div class="card text-center border-0">
+                            <div class="position-relative">
+                                <img src="assets/img/prive/gallery/11.png" class="card-img-top"
+                                    alt="Banquet Level Floor Plan">
+    
+                                <!-- Overlay button -->
+                                <div class="prive-image-overlay">
+                                    <a href="javascript:void(0)" class="th-btn style-border prive-new-btn"
+                                        data-bs-toggle="modal" data-bs-target="#enquireModal">
+                                        Get A Plan
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body p-2">
+                                <h5 class="card-title prive-floor-plan-title fw-semibold mb-0">Banquet Level Floor Plan</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+    </section>
+
+
     <!--==============================
 Connectivity  
 ==============================-->
@@ -625,8 +896,8 @@ Counter Area
             <div class="counter-card-wrap space">
                 <div class="counter-card style2">
                     <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">29</span>+</h2>
-                        <p class="box-text">YEARS OF EXPERIENCES</p>
+                        <h2 class="box-number"><span class="counter-number">25</span>+</h2>
+                        <p class="box-text">mn sq.ft devlivered</p>
                     </div>
                 </div>
                 <div class="counter-card style2">
@@ -637,8 +908,8 @@ Counter Area
                 </div>
                 <div class="counter-card style2">
                     <div class="media-body">
-                        <h2 class="box-number"><span class="counter-number">85</span>+</h2>
-                        <p class="box-text">TEAM MEMBERS</p>
+                        <h2 class="box-number"><span class="counter-number">29</span>+</h2>
+                        <p class="box-text">Years of Experience </p>
                     </div>
                 </div>
                 <div class="counter-card style2">
@@ -780,7 +1051,7 @@ Appointment Area
                 <div class="row gx-60 align-items-center">
                     <div class="col-lg-5">
                         <div class="appointment-thumb text-xl-end mb-lg-0 mb-50">
-                            <img src="assets/img/normal/booking_1_1.png" alt="img">
+                            <img src="assets/img/prive/amenities/amenities1.jpeg " alt="img">
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -1011,10 +1282,13 @@ Appointment Area
                                     </div>
                                     <div class="info-box_text">
                                         <div class="icon">
-                                            <img src="assets/img/icon/phone.svg" alt="img">
+                                            <!-- <img src="assets/img/icon/phone.svg" alt="img"> -->
+                                            <i class="fa-brands fa-whatsapp"></i>
                                         </div>
                                         <div class="details my-auto">
-                                            <p><a href="tel:+7700037581" class="info-box_link">770 003 7581</a></p>
+                                            <!-- <p><a href="tel:+0123456789" class="info-box_link">+01 234 567 890</a></p> -->
+                                            <p><a href="https://api.whatsapp.com/send/?phone=+91%207700037581&text=I want to know about Rustomjee Crown Prabhadevi Property"
+                                                    class="info-box_link">+91 770 003 7581</a></p>
                                         </div>
                                     </div>
                                     <div class="info-box_text">
@@ -1151,6 +1425,13 @@ Appointment Area
         </svg>
     </div>
 
+    <div class="whatsapp-floating-btn">
+        <a href="https://api.whatsapp.com/send/?phone=+91%207700037581&text=I want to know about Rustomjee Crown Prabhadevi Property"
+            class="whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
     <!--==============================
     All Js File
 ============================== -->
@@ -1220,6 +1501,46 @@ Appointment Area
             },
         });
     </script>
+    <script>
+        var heroSwiper = new Swiper(".hero-swiper", {
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+    <script>
+        var swiper = new Swiper("#property-floorplan-slider", {
+            slidesPerView: 3,        // 3 cards side by side
+            spaceBetween: 30,        // gap between cards
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,   // mobile
+                },
+                768: {
+                    slidesPerView: 2,   // tablet
+                },
+                1200: {
+                    slidesPerView: 3,   // desktop
+                }
+            }
+        });
+
+    </script>
+
 </body>
 
 </html>
