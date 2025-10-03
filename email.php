@@ -78,29 +78,30 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 // session_start();
 
 // Check for reCAPTCHA response
-// if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
-//   $secretKey = "6LfvuIArAAAAALvE_bp7fd5FgG_tlmMc1fjCNjsW";
-//   $ip = $_SERVER['REMOTE_ADDR'];
-//   $response = $_POST['g-recaptcha-response'];
-//   $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=$ip";
-//   $fire = file_get_contents($url);
-//   $data = json_decode($fire);
-//   if ($data->success == true) {
+if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+  $secretKey = "6LfvuIArAAAAALvE_bp7fd5FgG_tlmMc1fjCNjsW";
+  $ip = $_SERVER['REMOTE_ADDR'];
+  $response = $_POST['g-recaptcha-response'];
+  $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=$ip";
+  $fire = file_get_contents($url);
+  $data = json_decode($fire);
+  if ($data->success == true) {
     // Initialize PHPMailer
     $mail = new PHPMailer();
     $mail->SMTPDebug = 0;
     $mail->Host = "mail.rustomjee.in.net";
     $mail->Port = 465;
     $mail->IsHTML(true);
-    $mail->Username = 'info@rustomjee.in.net';
-    $mail->Password = 'VNGr?t1mG^JM'; 
+    // $mail->Username = 'info@rustomjee.in.net';
+    // $mail->Password = 'VNGr?t1mG^JM'; 
     $mail->setFrom('info@rustomjee.in.net', 'crown');
 
     // Add recipients
     $mail->addBCC('sanjaresolutions@gmail.com', 'sanjaresolutions');
     // $mail->addBCC('mirzafaizan1931@gmail.com', 'Faizan Mirza');
 
-    $mail->addBCC('info_crown@rustomjee.in.net', 'crown');
+    // $mail->addBCC('info_crown@rustomjee.in.net', 'crown');
+    $mail->addBCC('info@rustomjee.in.net', 'rustomjee');
     // $mail->addAddress(' supritdagade77@gmail.com', 'suprit');
     // $mail->Subject = 'Contact form submitted data.';
 
@@ -111,7 +112,7 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
     $email = ($_POST['email'] != '') ? $_POST['email'] : '';
     $phone = ($_POST['phone'] != '') ? $_POST['phone'] : '';
     $message = $_POST['message'] ?? '';
-    $subject = $_POST['subject'] ?? 'Crown Enquiry';
+    $subject = $_POST['subject'] ?? 'Property Enquiry form submited';
 
     $mail->Subject = "Contact form submission: " . $subject;
 
@@ -149,6 +150,26 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
     $html .= "         </tr>
                 </table>";
 
+    // Send data to CRM
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+      CURLOPT_RETURNTRANSFER => 1,
+      CURLOPT_URL => 'https://sanjarcrm.com/api/leads/submit',
+      CURLOPT_POST => 1,
+      CURLOPT_POSTFIELDS => array(
+        'name' => $name,
+        'contact' => $phone,
+        'message' => $message,
+        'email' => $email,
+        'extra' => $form,
+        'table_alias' => 'bestivfdoctor_co_in_sanjar',
+        'api_key' => 'ee2d890660cbb7ed7dbd643de2e52018',
+      )
+    ));
+
+     $resp = curl_exec($curl);
+    curl_close($curl);
+
 
     // Prepare email message
     $mail->msgHTML($html);
@@ -175,6 +196,28 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
             </script>
         ";
     }
+  } else {
+    echo "
+        <script type=\"text/javascript\">
+            swal(
+                'Error',
+                'reCAPTCHA verification failed. Please try again.',
+                'error'
+            );
+        </script>
+    ";
+  }
+} else {
+  echo "
+      <script type=\"text/javascript\">
+          swal(
+              'Error',
+              'Please complete the reCAPTCHA.',
+              'error'
+          );
+      </script>
+  ";
+}
 ?>
 
 
