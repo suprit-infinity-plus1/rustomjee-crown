@@ -79,7 +79,7 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 
 // Check for reCAPTCHA response
 if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
-  $secretKey = "6LfvuIArAAAAALvE_bp7fd5FgG_tlmMc1fjCNjsW";
+  $secretKey = "6LeKPt0rAAAAANYefJJ0xXFB-OSrqt_8KX3yDPwQ";
   $ip = $_SERVER['REMOTE_ADDR'];
   $response = $_POST['g-recaptcha-response'];
   $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=$ip";
@@ -161,9 +161,9 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
         'contact' => $phone,
         'message' => $message,
         'email' => $email,
-        'extra' => $form,
-        'table_alias' => 'bestivfdoctor_co_in_sanjar',
-        'api_key' => 'ee2d890660cbb7ed7dbd643de2e52018',
+        'extra' => $subject,
+        'table_alias' => 'brickstonerealtors_com',
+        'api_key' => '7b08cc35f620f4d7aa36d08866e105af',
       )
     ));
 
