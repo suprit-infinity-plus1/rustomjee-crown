@@ -4917,7 +4917,8 @@ textarea.is-invalid {
   line-height: var(--icon-size, 56px);
   text-align: center;
   background-color: var(--white-color);
-  color: var(--theme-color);
+  /* color: var(--theme-color); */
+  color: var(--gray-color);
   font-size: var(--icon-font-size, 1.4em);
   border-radius: 50%;
   z-index: 1;
@@ -18544,7 +18545,8 @@ span.select2-selection.select2-selection--single:focus {
 
 .img-box2 .about-tag .play-btn i {
   line-height: 110px;
-  background: var(--gray-color);
+  /* background: var(--gray-color); */
+  background: var(--theme-color);
   --icon-font-size: 26px;
   border: 20px solid var(--white-color);
 }
@@ -43697,4 +43699,12 @@ span.select2-selection.select2-selection--single:focus {
 .enquiry-btn:hover {
     opacity: 0.9;
     text-decoration: none;
+}
+
+.circle-title-anime{
+  text-transform: uppercase;
+  letter-spacing: 50px;
+  font-weight: 600;
+  text-shadow: 0 0 20px #fff, 0 0 20px #fff;
+  padding: 5px 10px;
 }
