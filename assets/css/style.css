@@ -4299,7 +4299,7 @@ textarea.is-invalid {
   filter: none;
 }
 
-.th-btn.style2 {
+/* .th-btn.style2 {
   background: var(--title-color);
   color: var(--white-color);
   padding: 21px 32px;
@@ -4311,6 +4311,38 @@ textarea.is-invalid {
   color: var(--white-color);
   width: 22px;
   height: 22px;
+  animation: invertToggle 10s infinite;
+}
+@keyframes invertToggle {
+  0%, 50% {
+    filter: brightness(1) invert(0); 
+  }
+  51%, 100% {
+    filter: brightness(1) invert(1);
+  }
+} */
+.th-btn.style2.th-btn-icon:after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  filter: brightness(1) invert(0); /* start as white */
+  animation: invertToggle 10s infinite;
+}
+
+@keyframes invertToggle {
+  0% {
+    filter: brightness(1) invert(0); /* white */
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1) invert(1); /* inverted */
+    transform: scale(1.04);
+  }
+  100% {
+    filter: brightness(1) invert(0); /* white again */
+    transform: scale(1.08);
+  }
 }
 
 .th-btn.style3 {
@@ -43626,9 +43658,43 @@ span.select2-selection.select2-selection--single:focus {
     margin-bottom: 24px !important;
   }
 }
-.th-menu-area.text-center.prive{
-  border-right: 3px solid var(--title-dark) ;
+
+.th-menu-area.text-center.prive {
+  border-right: 3px solid var(--title-dark);
 }
-.btn-scale{
-  transform: scale(1.07);
+
+.btn-animate {
+  animation-name: myAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  
+}
+@keyframes myAnimation {
+0%   {transform: scale(1); background-color: #000000; color: #fff;}
+50%  {transform: scale(1.04); background-color: #eed26e; color: #000; }
+100% {transform: scale(1.08); background-color: #000000; color: #fff;}
+}
+
+
+
+
+.enquiry-btn {
+    margin-right: -42px;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #eed26e;
+    color: #000;
+    padding: 12px 16px;
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+    transform: rotate(-90deg);
+    text-orientation: mixed;
+    z-index: 9999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.enquiry-btn:hover {
+    opacity: 0.9;
+    text-decoration: none;
 }
