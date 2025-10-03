@@ -43617,6 +43617,18 @@ span.select2-selection.select2-selection--single:focus {
   color: var(--title-color);
 }
 
-.prive-floor-plan-title{
+.prive-floor-plan-title {
   color: var(--theme-color);
+}
+
+@media (max-width:768px) {
+  .widget_nav_menu.footer-widget.useful-link {
+    margin-bottom: 24px !important;
+  }
+}
+.th-menu-area.text-center.prive{
+  border-right: 3px solid var(--title-dark) ;
+}
+.btn-scale{
+  transform: scale(1.07);
 }
