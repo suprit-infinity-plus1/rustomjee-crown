@@ -43484,6 +43484,41 @@ span.select2-selection.select2-selection--single:focus {
   line-height: 1;
   margin: 0 10px;
 }
+.offer-label-prive {
+  display: block;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  margin-top: 6px;
+  letter-spacing: 1px;
+  color: #ddd;
+}
+/* ✅ Tablet adjustments */
+@media (max-width: 991px) {
+  .offer-percent-prive {
+    font-size: 2rem;
+  }
+  .offer-label-prive {
+    font-size: 0.65rem;
+  }
+  .offer-divider-prive {
+    font-size: 2rem;
+  }
+}
+
+/* ✅ Mobile adjustments */
+@media (max-width: 576px) {
+  .offer-split {
+    gap: 8px;
+  }
+  .offer-percent-prive {
+    font-size: 1.7rem;
+  }
+  .offer-divider-prive {
+    /* display: none;  */
+    font-size: 1.7rem;
+    margin: 0;
+  }
+}
 
 .offer-label {
   display: block;
@@ -43774,3 +43809,35 @@ span.select2-selection.select2-selection--single:focus {
   text-shadow: 0 0 20px #fff, 0 0 20px #fff;
   padding: 5px 10px;
 }
+
+/* ==============thank u page ================== */
+  /* .thank-page-section {
+    background-color: #f8f9fa;
+  } */
+  .thank-page-box {
+    background: #fff;
+    border: 2px solid #eed26e;
+  }
+  .thank-page-title {
+    color: #eed26e;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  .thank-page-message {
+    color: #6c757d; 
+    font-size: 1.1rem;
+  }
+  .thank-page-btn {
+    background-color: #eed26e;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  .thank-page-btn:hover {
+    background-color: #d4ba4f;
+    color: #fff;
+  }
+
+  
