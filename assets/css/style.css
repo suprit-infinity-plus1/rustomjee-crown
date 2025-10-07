@@ -43840,4 +43840,8 @@ span.select2-selection.select2-selection--single:focus {
     color: #fff;
   }
 
-  
+  .banner-text-overlay{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+  }
