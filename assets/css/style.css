@@ -43468,7 +43468,8 @@ span.select2-selection.select2-selection--single:focus {
   text-shadow: 0 0 25px rgba(212, 175, 122, 0.4);
   animation: shine 3s linear infinite;
 }
-.offer-percent-prive{
+
+.offer-percent-prive {
   font-size: 3rem;
   font-weight: 900;
   display: inline-block;
@@ -43477,13 +43478,15 @@ span.select2-selection.select2-selection--single:focus {
   color: #eed26e;
 
 }
-.offer-divider-prive{
+
+.offer-divider-prive {
   color: #eed26e;
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
   margin: 0 10px;
 }
+
 .offer-label-prive {
   display: block;
   font-size: 0.95rem;
@@ -43492,14 +43495,17 @@ span.select2-selection.select2-selection--single:focus {
   letter-spacing: 1px;
   color: #ddd;
 }
+
 /* ✅ Tablet adjustments */
 @media (max-width: 991px) {
   .offer-percent-prive {
     font-size: 2rem;
   }
+
   .offer-label-prive {
     font-size: 0.65rem;
   }
+
   .offer-divider-prive {
     font-size: 2rem;
   }
@@ -43510,9 +43516,11 @@ span.select2-selection.select2-selection--single:focus {
   .offer-split {
     gap: 8px;
   }
+
   .offer-percent-prive {
     font-size: 1.7rem;
   }
+
   .offer-divider-prive {
     /* display: none;  */
     font-size: 1.7rem;
@@ -43802,7 +43810,7 @@ span.select2-selection.select2-selection--single:focus {
   text-decoration: none;
 }
 
-.circle-title-anime{
+.circle-title-anime {
   text-transform: uppercase;
   /* letter-spacing: 50px; */
   font-weight: 600;
@@ -43811,97 +43819,68 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 /* ==============thank u page ================== */
-  /* .thank-page-section {
+/* .thank-page-section {
     background-color: #f8f9fa;
   } */
-  .thank-page-box {
-    background: #fff;
-    border: 2px solid #eed26e;
-  }
-  .thank-page-title {
-    color: #eed26e;
-    font-weight: 700;
-    font-size: 2.5rem;
-  }
-  .thank-page-message {
-    color: #6c757d; 
-    font-size: 1.1rem;
-  }
-  .thank-page-btn {
-    background-color: #eed26e;
-    color: #000;
-    font-weight: 600;
-    padding: 10px 25px;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-  }
-  .thank-page-btn:hover {
-    background-color: #d4ba4f;
-    color: #fff;
-  }
+.thank-page-box {
+  background: #fff;
+  border: 2px solid #eed26e;
+}
 
-  .banner-text-overlay{
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    border-radius: 12px;
-  }
+.thank-page-title {
+  color: #eed26e;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.thank-page-message {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.thank-page-btn {
+  background-color: #eed26e;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.thank-page-btn:hover {
+  background-color: #d4ba4f;
+  color: #fff;
+}
+
+.banner-text-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 12px;
+}
 
 
-  /* ================== banerr images ================== */
+/* ================== banerr images ================== */
 
 .hero-banner-1 {
-  background-image: url("../img/prive/banner/prive-banner-m-1.png"); /* Mobile first (≤575px) */
+  background-image: url("../img/prive/banner/prive-banner-m-1.png");
+  /* Mobile first (≤575px) */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-@media (min-width: 576px) {
-  .hero-banner-1 {
-    background-image: url("../img/prive/banner/prive-banner-t-1.png");
-  }
-}
-
-@media (min-width: 992px) {
-  .hero-banner-1 {
-    background-image: url("../img/prive/banner/prive-banner-l-1.png");
-  }
-}
-
-@media (min-width: 1400px) {
-  .hero-banner-1 {
-    background-image: url("../img/prive/banner/prive-banner-1.png");
-  }
 }
 
 
 .hero-banner-2 {
-  background-image: url("../img/prive/banner/prive-banner-m-2.png"); /* Mobile first (≤575px) */
+  background-image: url("../img/prive/banner/prive-banner-m-2.png");
+  /* Mobile first (≤575px) */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-@media (min-width: 576px) {
-  .hero-banner-2 {
-    background-image: url("../img/prive/banner/prive-banner-t-2.png");
-  }
-}
-
-@media (min-width: 992px) {
-  .hero-banner-2 {
-    background-image: url("../img/prive/banner/prive-banner-l-2.png");
-  }
-}
-
-@media (min-width: 1400px) {
-  .hero-banner-2 {
-    background-image: url("../img/prive/banner/prive-banner-2.png");
-  }
-}
-
 .hero-banner-3 {
-  background-image: url("../img/prive/banner/prive-banner-m-3.png"); /* Mobile first (≤575px) */
+  background-image: url("../img/prive/banner/prive-banner-m-3.png");
+  /* Mobile first (≤575px) */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -43911,16 +43890,40 @@ span.select2-selection.select2-selection--single:focus {
   .hero-banner-3 {
     background-image: url("../img/prive/banner/prive-banner-t-3.png");
   }
+
+  .hero-banner-2 {
+    background-image: url("../img/prive/banner/prive-banner-t-2.png");
+  }
+
+  .hero-banner-1 {
+    background-image: url("../img/prive/banner/prive-banner-t-1.png");
+  }
 }
 
 @media (min-width: 992px) {
   .hero-banner-3 {
     background-image: url("../img/prive/banner/prive-banner-l-3.png");
   }
+
+  .hero-banner-2 {
+    background-image: url("../img/prive/banner/prive-banner-l-2.png");
+  }
+
+  .hero-banner-1 {
+    background-image: url("../img/prive/banner/prive-banner-l-1.png");
+  }
 }
 
 @media (min-width: 1400px) {
   .hero-banner-3 {
     background-image: url("../img/prive/banner/prive-banner-3.png");
+  }
+
+  .hero-banner-2 {
+    background-image: url("../img/prive/banner/prive-banner-2.png");
+  }
+
+  .hero-banner-1 {
+    background-image: url("../img/prive/banner/prive-banner-1.png");
   }
 }
