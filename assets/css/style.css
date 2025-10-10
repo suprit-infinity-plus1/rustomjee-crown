@@ -43867,8 +43867,8 @@ span.select2-selection.select2-selection--single:focus {
 
 /* ================== banerr images ================== */
 
-.hero-banner-1 {
-  background-image: url("../img/prive/banner/prive-banner-m-1.png");
+.prive-hero-banner-1 {
+  background-image: url("../img/prive/banner/m-1.png");
   /* Mobile first (≤575px) */
   background-size: cover;
   background-position: center;
@@ -43876,16 +43876,16 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 
-.hero-banner-2 {
-  background-image: url("../img/prive/banner/prive-banner-m-2.png");
+.prive-hero-banner-2 {
+  background-image: url("../img/prive/banner/m-2.png");
   /* Mobile first (≤575px) */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.hero-banner-3 {
-  background-image: url("../img/prive/banner/prive-banner-m-3.png");
+.prive-hero-banner-3 {
+  background-image: url("../img/prive/banner/m-3.png");
   /* Mobile first (≤575px) */
   background-size: cover;
   background-position: center;
@@ -43893,44 +43893,44 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 @media (min-width: 576px) {
-  .hero-banner-3 {
-    background-image: url("../img/prive/banner/prive-banner-t-3.png");
+  .prive-hero-banner-3 {
+    background-image: url("../img/prive/banner/t-3.png");
   }
 
-  .hero-banner-2 {
-    background-image: url("../img/prive/banner/prive-banner-t-2.png");
+  .prive-hero-banner-2 {
+    background-image: url("../img/prive/banner/t-2.png");
   }
 
-  .hero-banner-1 {
-    background-image: url("../img/prive/banner/prive-banner-t-1.png");
+  .prive-hero-banner-1 {
+    background-image: url("../img/prive/banner/t-1.png");
   }
 }
 
 @media (min-width: 992px) {
-  .hero-banner-3 {
-    background-image: url("../img/prive/banner/prive-banner-l-3.png");
+  .prive-hero-banner-3 {
+    background-image: url("../img/prive/banner/d-3.png");
   }
 
-  .hero-banner-2 {
-    background-image: url("../img/prive/banner/prive-banner-l-2.png");
+  .prive-hero-banner-2 {
+    background-image: url("../img/prive/banner/d-2.png");
   }
 
-  .hero-banner-1 {
-    background-image: url("../img/prive/banner/prive-banner-l-1.png");
+  .prive-hero-banner-1 {
+    background-image: url("../img/prive/banner/d-1.png");
   }
 }
 
 @media (min-width: 1400px) {
-  .hero-banner-3 {
-    background-image: url("../img/prive/banner/prive-banner-3.png");
+  .prive-hero-banner-3 {
+    background-image: url("../img/prive/banner/l-3.png");
   }
 
-  .hero-banner-2 {
-    background-image: url("../img/prive/banner/prive-banner-2.png");
+  .prive-hero-banner-2 {
+    background-image: url("../img/prive/banner/l-2.png");
   }
 
-  .hero-banner-1 {
-    background-image: url("../img/prive/banner/prive-banner-1.png");
+  .prive-hero-banner-1 {
+    background-image: url("../img/prive/banner/l-1.png");
   }
 }
 
