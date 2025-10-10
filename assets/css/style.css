@@ -6115,6 +6115,12 @@ hr.title-line {
 }
 
 /*------------------- 3.7. Background -------------------*/
+.forsted-bg-theme {
+  /* background-color: var(--theme-color) ; */
+  background-color: rgb(255 255 255 / 13%) !important;
+  backdrop-filter: blur(10px);
+}
+
 .bg-theme {
   background-color: var(--theme-color) !important;
 }
@@ -43993,21 +43999,32 @@ span.select2-selection.select2-selection--single:focus {
   .vista-hero-banner-2 {
     background-image: url("../img/ocean-vista/banner/vista-banner-l-2.png");
   }
-  
+
   .vista-hero-banner-1 {
     background-image: url("../img/ocean-vista/banner/vista-banner-l-1.png");
   }
 }
+
 @media (min-width: 1401px) {
- .vista-hero-banner-3 {
+  .vista-hero-banner-3 {
     background-image: url("../img/ocean-vista/banner/vista-banner-3.png");
   }
 
   .vista-hero-banner-2 {
     background-image: url("../img/ocean-vista/banner/vista-banner-2.png");
   }
-  
+
   .vista-hero-banner-1 {
     background-image: url("../img/ocean-vista/banner/vista-banner-1.png");
   }
+}
+
+.offer-strip-bg {
+  background: #2A7B9B;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 90%);
+}
+
+
+.mid-offer-part {
+  background-color: #fff;
 }
