@@ -44025,6 +44025,157 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 
-.mid-offer-part {
-  background-color: #fff;
+
+.offer-left-part,
+.offer-right-part {
+  background-color: #EED26E;
+  position: relative;
+  overflow: hidden;
 }
+
+.offer-center-part {
+  position: relative;
+  overflow: hidden;
+  background-color: #EED26E;
+  box-shadow: inset 10px 0 10px #a582034a, inset -10px 0 10px #a582034a;
+}
+
+.offer-left-part {
+  padding-left: 70px;
+}
+
+.offer-right-part {
+  padding-right: 70px;
+}
+
+.offer-left-part::before {
+  content: "";
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: var(--theme-color) !important;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.offer-left-part::after {
+  content: "";
+  position: absolute;
+  height: 200%;
+  width: 30px;
+  top: 50%;
+  left: 140px;
+  transform: translate(0, -50%) rotate(30deg);
+  background: #edc842;
+  background: linear-gradient(90deg, rgba(237, 200, 66, 0) 0%, rgba(237, 200, 66, 1) 50%, rgba(237, 200, 66, 0.41) 100%);
+  animation: offerStripAnimationLeft 4s infinite;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+.offer-center-part::after {
+  content: "";
+  position: absolute;
+  height: 200%;
+  width: 30px;
+  top: 50%;
+  left: 140px;
+  transform: translate(0, -50%) rotate(30deg);
+  background: #edc842;
+  background: linear-gradient(90deg, rgba(237, 200, 66, 0) 0%, rgba(237, 200, 66, 1) 50%, rgba(237, 200, 66, 0.41) 100%);
+  animation: offerStripAnimationCenter 4s infinite;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+.offer-right-part::after {
+  content: "";
+  position: absolute;
+  height: 200%;
+  width: 30px;
+  top: 50%;
+  left: 140px;
+  transform: translate(0, -50%) rotate(30deg);
+  background: #edc842;
+  background: linear-gradient(90deg, rgba(237, 200, 66, 0) 0%, rgba(237, 200, 66, 1) 50%, rgba(237, 200, 66, 0.41) 100%);
+  animation: offerStripAnimationRight 4s infinite;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+.offer-right-part::before {
+  content: "";
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: var(--theme-color) !important;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 2;
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+@keyframes offerStripAnimationLeft {
+  0% {
+    left: -10%;
+  }
+
+  40% {
+    left: 105%;
+  }
+
+  100% {
+    left: 105%;
+  }
+}
+
+@keyframes offerStripAnimationCenter {
+  0% {
+    left: -40%;
+  }
+
+  30% {
+    left: -40%;
+  }
+
+  70% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+@keyframes offerStripAnimationRight {
+  0% {
+    left: -40%;
+  }
+
+  60% {
+    left: -40%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+
+
+/* .offer-extra-right-part::after {
+  content: "";
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: var(--theme-color) !important;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 2;
+  transform: translate(50%, -50%) rotate(45deg);
+} */
