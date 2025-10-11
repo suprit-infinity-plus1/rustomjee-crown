@@ -43374,7 +43374,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .offer-section {
-  background: linear-gradient(135deg, #1c2d37, #132229);
+  /* background: linear-gradient(135deg, #1c2d37, #132229); */
   color: #fff;
   width: 100%;
   border-radius: 0;
