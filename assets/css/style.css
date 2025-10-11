@@ -88,6 +88,7 @@ Version: 1.0.0
 
 /*------------------- 1.2. Function -------------------*/
 /*------------------- 1.3. Variable-------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 :root {
   --theme-color: #1C2D37;
@@ -43373,7 +43374,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .offer-section {
-  background: linear-gradient(135deg, #1c2d37, #132229);
+  /* background: linear-gradient(135deg, #1c2d37, #132229); */
   color: #fff;
   width: 100%;
   border-radius: 0;
@@ -44256,7 +44257,7 @@ span.select2-selection.select2-selection--single:focus {
   filter: invert(100%);
 }
 
-.DancingScript {
+.dancing-script {
   font-family: 'Dancing Script', cursive;
 }
 
