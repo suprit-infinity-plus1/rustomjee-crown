@@ -21826,9 +21826,9 @@ span.select2-selection.select2-selection--single:focus {
   transition: 0.4s;
 }
 
-.service-card .box-title {
+/* .service-card .box-title {
   margin-top: 30px;
-}
+} */
 
 .service-card .box-title a {
   color: var(--white-color);
@@ -33151,7 +33151,8 @@ span.select2-selection.select2-selection--single:focus {
   border: 1px solid var(--light-color);
   border-radius: 10px;
   background: var(--white-color);
-  padding: 10px 10px 40px;
+  /* padding: 10px 10px 40px; */
+  padding: 10px 10px;
   text-align: center;
   overflow: hidden;
   z-index: 3;
@@ -33163,12 +33164,12 @@ span.select2-selection.select2-selection--single:focus {
   overflow: hidden;
   display: block;
   position: relative;
-  z-index: -1;
-  opacity: 0;
+  /* z-index: -1; */
+  /* opacity: 0; */
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  position: absolute;
-  inset: 10px;
+  /* position: absolute; */
+  /* inset: 10px; */
 }
 
 .service-card.style7 .service-img img {
@@ -33189,6 +33190,15 @@ span.select2-selection.select2-selection--single:focus {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   z-index: 1;
+}
+
+.service-card-content {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  /* width: 100%; */
+  width: calc(100% - 20px);
+  margin-bottom: 20px;
 }
 
 .service-card.style7 .service-img .icon-btn {
@@ -33245,14 +33255,16 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .service-card.style7 .box-title {
-  margin-top: -0.32em;
-  max-width: 160px;
+  /* margin-top: -0.32em; */
+  /* max-width: 160px; */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
 }
 
 .service-card.style7 .box-title a {
-  color: var(--title-dark);
+  /* color: var(--title-dark); */
+  color: #fff;
   font-size: 24px;
   font-weight: 600;
 }
@@ -33276,7 +33288,8 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .service-card.style7:hover .box-title a {
-  color: var(--white-color);
+  /* color: var(--white-color); */
+  color: var(--theme-color2);
 }
 
 .service-card.style7:hover .box-title a:hover {
@@ -33284,6 +33297,11 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .service-card.style7:hover .box-num {
+  /* color: var(--white-color); */
+  color: var(--theme-color2);
+}
+
+.service-card.style7 .box-num {
   color: var(--white-color);
 }
 
