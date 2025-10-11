@@ -34991,7 +34991,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .hero-style13 {
-  padding: 200px 0;
+  /* padding: 200px 0; */
   /* Large devices */
   /* Small devices */
 }
@@ -35077,17 +35077,7 @@ span.select2-selection.select2-selection--single:focus {
   margin-top: 40px;
 }
 
-@media (max-width: 1199px) {
-  .hero-style13 {
-    padding: 140px 0;
-  }
-}
 
-@media (max-width: 767px) {
-  .hero-style13 {
-    padding: 120px 0;
-  }
-}
 
 /* about area 13 ---------------------------------- */
 .about-thumb13 {
@@ -43422,6 +43412,8 @@ span.select2-selection.select2-selection--single:focus {
   left: 25%;
   animation-delay: 4s;
 }
+
+
 
 @keyframes offer-float {
   0% {
