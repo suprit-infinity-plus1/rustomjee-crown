@@ -43867,6 +43867,73 @@ span.select2-selection.select2-selection--single:focus {
 
 /* ================== banerr images ================== */
 
+.ocean-vista-hero-banner-1 {
+  background-image: url("../img/ocean-vista/banner/m-1.png");
+  /* Mobile first (≤575px) */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.ocean-vista-hero-banner-2 {
+  background-image: url("../img/ocean-vista/banner/m-2.png");
+  /* Mobile first (≤575px) */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ocean-vista-hero-banner-3 {
+  background-image: url("../img/ocean-vista/banner/m-3.png");
+  /* Mobile first (≤575px) */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 576px) {
+  .ocean-vista-hero-banner-3 {
+    background-image: url("../img/ocean-vista/banner/t-3.png");
+  }
+
+  .ocean-vista-hero-banner-2 {
+    background-image: url("../img/ocean-vista/banner/t-2.png");
+  }
+
+  .ocean-vista-hero-banner-1 {
+    background-image: url("../img/ocean-vista/banner/t-1.png");
+  }
+}
+
+@media (min-width: 992px) {
+  .ocean-vista-hero-banner-3 {
+    background-image: url("../img/ocean-vista/banner/d-3.png");
+  }
+
+  .ocean-vista-hero-banner-2 {
+    background-image: url("../img/ocean-vista/banner/d-2.png");
+  }
+
+  .ocean-vista-hero-banner-1 {
+    background-image: url("../img/ocean-vista/banner/d-1.png");
+  }
+}
+
+@media (min-width: 1400px) {
+  .ocean-vista-hero-banner-3 {
+    background-image: url("../img/ocean-vista/banner/l-3.png");
+  }
+
+  .ocean-vista-hero-banner-2 {
+    background-image: url("../img/ocean-vista/banner/l-2.png");
+  }
+
+  .ocean-vista-hero-banner-1 {
+    background-image: url("../img/ocean-vista/banner/l-1.png");
+  }
+}
+
 .prive-hero-banner-1 {
   background-image: url("../img/prive/banner/m-1.png");
   /* Mobile first (≤575px) */
@@ -44168,4 +44235,18 @@ span.select2-selection.select2-selection--single:focus {
 
 #contact-us .video-area-2 .rustomjee-logo {
   filter: invert(100%);
+}
+
+.DancingScript {
+  font-family: 'Dancing Script', cursive;
+}
+
+.prive-banner-slider .hero-style12 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+  /* padding-bottom: 80px; */
+  padding: 140px 0 540px;
 }

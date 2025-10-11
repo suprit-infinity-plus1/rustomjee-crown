@@ -240,15 +240,15 @@ Hero Area
     </div> -->
 
     <!-- Swiper -->
-    <div class="swiper hero-swiper">
+    <div class="swiper hero-swiper prive-banner-slider">
         <div class="swiper-wrapper">
 
             <!-- Slide 1 -->
             <div class="swiper-slide">
-                <div class="th-hero-wrapper hero-12 prive-hero-banner-1" id="hero">
-                    <div class="container">
-                        <div class="hero-style12 text-center">
-                            <h1 class="hero-title text-theme2 banner-text-overlay">
+                <div class="th-hero-wrapper hero-12 prive-hero-banner-1">
+                    <div class="container-fluid">
+                        <div class="hero-style12">
+                            <h1 class="hero-title text-theme2">
                                 <span class="title: text-capitalize">Find balance</span>
                                 <span class="title text-capitalize">where skyline meets serenity</span>
                             </h1>
@@ -264,8 +264,8 @@ Hero Area
             <!-- Slide 2 -->
             <div class="swiper-slide">
                 <div class="th-hero-wrapper hero-12 prive-hero-banner-2">
-                    <div class="container">
-                        <div class="hero-style12 text-center">
+                    <div class="container-fluid">
+                        <div class="hero-style12">
                             <h1 class="hero-title text-theme2 banner-text-overlay">
                                 <span class="title text-capitalize">Rise above the ordinary</span>
                                 <span class="title text-capitalize">live the extraordinary</span>
@@ -282,8 +282,8 @@ Hero Area
             <!-- Slide 3 -->
             <div class="swiper-slide">
                 <div class="th-hero-wrapper hero-12 prive-hero-banner-3">
-                    <div class="container">
-                        <div class="hero-style12 text-center">
+                    <div class="container-fluid">
+                        <div class="hero-style12">
                             <h1 class="hero-title text-theme2 banner-text-overlay">
                                 <span class="title text-capitalize">Elegance in every corner</span>
                                 <span class="title text-capitalize">peace in every moment</span>
@@ -1575,10 +1575,11 @@ Appointment Area
                 el: ".swiper-pagination",
                 clickable: true,
             },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
+            autoplay: false,
+            //autoplay: {
+            //    delay: 3000,
+            //    disableOnInteraction: false,
+            //},
         });
     </script>
     <script>
