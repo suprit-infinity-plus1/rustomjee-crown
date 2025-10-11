@@ -44166,16 +44166,6 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 
-
-
-/* .offer-extra-right-part::after {
-  content: "";
-  height: 100%;
-  aspect-ratio: 1/1;
-  background-color: var(--theme-color) !important;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  z-index: 2;
-  transform: translate(50%, -50%) rotate(45deg);
-} */
+#contact-us .video-area-2 .rustomjee-logo {
+  filter: invert(100%);
+}
