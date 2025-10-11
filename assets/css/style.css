@@ -34108,15 +34108,39 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 
+@media (max-width: 991px) {
+  .hero-style12 .vista-banner-title {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-style12 .prive-banner-title {
+    font-size: 50px;
+  }
+}
+
 @media (max-width: 767px) {
   .hero-style12 .hero-title {
     font-size: 25px;
   }
 }
 
+@media (max-width: 767px) {
+  .hero-style12 .prive-banner-title {
+    font-size: 40px;
+  }
+}
+
 @media (max-width: 375px) {
   .hero-style12 .hero-title {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-style12 .prive-banner-title {
+    font-size: 30px;
   }
 }
 
@@ -44253,6 +44277,16 @@ span.select2-selection.select2-selection--single:focus {
   font-family: 'Dancing Script', cursive;
 }
 
+.vista-banner-slider .hero-style12 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+  /* padding-bottom: 80px; */
+  padding: 140px 0 350px;
+}
+
 .prive-banner-slider .hero-style12 {
   min-height: 100vh;
   display: flex;
@@ -44260,5 +44294,32 @@ span.select2-selection.select2-selection--single:focus {
   justify-content: flex-end;
   align-items: start;
   /* padding-bottom: 80px; */
-  padding: 140px 0 540px;
+  padding: 140px 0 350px;
+}
+
+@media (max-width: 991px) {
+  .prive-banner-slider .hero-style12 {
+    padding: 140px 0 350px;
+    align-items: center;
+  }
+}
+
+.vista-banner-title {
+  text-align: start !important;
+}
+
+@media (max-width: 991px) {
+  .vista-banner-title {
+    text-align: center !important;
+  }
+}
+
+.prive-banner-title {
+  text-align: start !important;
+}
+
+@media (max-width: 991px) {
+  .prive-banner-title {
+    text-align: center !important;
+  }
 }
