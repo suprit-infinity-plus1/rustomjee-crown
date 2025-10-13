@@ -34067,7 +34067,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .hero-style12 {
-  padding: 340px 0 240px;
+  /* padding: 340px 0 240px; */
   /* Medium Large devices */
   /* Large devices */
   /* Small devices */
@@ -34115,8 +34115,8 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 @media (max-width: 991px) {
-  .hero-style12 .prive-banner-title {
-    font-size: 50px;
+  .prive-banner-title {
+    font-size: 40px;
   }
 }
 
@@ -34127,8 +34127,8 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 @media (max-width: 767px) {
-  .hero-style12 .prive-banner-title {
-    font-size: 40px;
+  .prive-banner-title {
+    font-size: 30px;
   }
 }
 
@@ -34139,8 +34139,8 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 @media (max-width: 375px) {
-  .hero-style12 .prive-banner-title {
-    font-size: 30px;
+  .prive-banner-title {
+    font-size: 25px;
   }
 }
 
@@ -34150,19 +34150,19 @@ span.select2-selection.select2-selection--single:focus {
 
 @media (max-width: 1399px) {
   .hero-style12 {
-    padding: 300px 0 200px;
+    /* padding: 300px 0 200px; */
   }
 }
 
 @media (max-width: 1199px) {
   .hero-style12 {
-    padding: 250px 0 150px;
+    /* padding: 250px 0 150px; */
   }
 }
 
 @media (max-width: 767px) {
   .hero-style12 {
-    padding: 220px 0 140px;
+    /* padding: 220px 0 140px; */
   }
 }
 
@@ -34170,10 +34170,10 @@ span.select2-selection.select2-selection--single:focus {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   /* bottom */
   align-items: center;
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
 }
 
 .hero-scroll-down12 {
@@ -44288,22 +44288,38 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .prive-banner-slider .hero-style12 {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: start;
-  /* padding-bottom: 80px; */
-  padding: 140px 0 350px;
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .prive-banner-slider .hero-style12 {
-    padding: 140px 0 350px;
+    padding: 140px 0 200px;
     align-items: center;
   }
-}
+} */
 
+.banner-text-position{
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 119px);
+  justify-content: center;
+  align-items: start;
+}
+@media (max-width: 991px) {
+  .banner-text-position{
+    justify-content: end;
+  }
+}
+@media (min-width: 992px) {
+
+  .prive-banner-title{
+    font-size: 50px;
+  }
+}
 .vista-banner-title {
   text-align: start !important;
 }
