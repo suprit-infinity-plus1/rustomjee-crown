@@ -1415,3 +1415,34 @@
   //     }
   //   }
 })(jQuery);
+
+
+
+// lazy load
+document.addEventListener("DOMContentLoaded", function() {
+  const lazyDivs = document.querySelectorAll('.lazy-background-unique');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const div = entry.target;
+          const bg = div.getAttribute('data-bg');
+          if (bg) {
+            div.style.backgroundImage = `url('${bg}')`;
+            div.removeAttribute('data-bg');
+          }
+          obs.unobserve(div);
+        }
+      });
+    });
+
+    lazyDivs.forEach(div => observer.observe(div));
+  } else {
+    // Fallback for old browsers
+    lazyDivs.forEach(div => {
+      const bg = div.getAttribute('data-bg');
+      if (bg) div.style.backgroundImage = `url('${bg}')`;
+    });
+  }
+});
