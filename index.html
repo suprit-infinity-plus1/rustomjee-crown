@@ -127,11 +127,11 @@
                     <li class="active"><a href="index.html">Home</a>
 
                     </li>
-                    <li class="menu-item-has-children"><a href="#about-us">About Us</a>
-                        <ul class="sub-menu">
+                    <li class=""><a href="#about-us">About Us</a>
+                        <!-- <ul class="sub-menu">
                             <li><a href="#gallery">Gallery</a></li>
                             <li><a href="blog.html">News</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <li class="menu-item-has-children"><a href="property.html">Properties</a>
                         <ul class="sub-menu">
@@ -150,7 +150,8 @@
 
                     <li><a href="#testimonials">Testimonial</a></li>
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
+                    <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#enquireModal">Contact
+                            Us</a></li>
                 </ul>
             </div>
         </div>
@@ -205,11 +206,11 @@
                                     <li class=" active"><a href="index.html">Home</a>
 
                                     </li>
-                                    <li class="menu-item-has-children"><a href="#about-us">About Us</a>
-                                        <ul class="sub-menu">
+                                    <li class=""><a href="#about-us">About Us</a>
+                                        <!-- <ul class="sub-menu">
                                             <li><a href="#gallery">Gallery</a></li>
                                             <li><a href="blog.html">News</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                     <li class="menu-item-has-children"><a href="property.html">Properties</a>
                                         <ul class="sub-menu">
@@ -239,7 +240,8 @@
                                     <li><a href="privacy-policy.html">Privacy Policy</a>
 
                                     </li>
-                                    <li><a href="#contact-us">Contact Us</a></li>
+                                    <li><a href="javascript:void(0)" data-bs-toggle="modal"
+                                            data-bs-target="#enquireModal">Contact Us</a></li>
                                 </ul>
                             </nav><button type="button" class="th-menu-toggle d-block d-lg-none"><i
                                     class="far fa-bars"></i></button>
@@ -1761,7 +1763,8 @@
                     <div class="footer-all-widget-item">
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
-                                <div class="about-logo"><a href="index.html"><img src="assets2/img/logo/rustomjee-main-logo-white.png"
+                                <div class="about-logo"><a href="index.html"><img
+                                            src="assets2/img/logo/rustomjee-main-logo-white.png"
                                             alt="Brick Stone Realtors-html"></a></div>
                                 <p class="about-text">At Rustomjee, every home is a harmony of elegance and openness
                                     spacious living that connects you effortlessly with nature.
@@ -1871,45 +1874,62 @@
     <!-- <div class="connect-btn">
         <button id="connectToggle">Let's Connect</button>
     </div> -->
-    <!-- Popup Modal with Form -->
-    <div class="connect-modal " id="connectModal">
-        <div class="connect-modal-content ">
-            <span class="close-modal">&times;</span>
-            <h4 class="mb-3">Connect Now</h4>
+    <div class="modal fade" style="z-index: 999;" id="enquireModal" tabindex="-1" aria-labelledby="enquireModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <!-- <div class="modal-content bg-theme border-0 shadow-lg rounded-3" style="max-width:500px; margin:auto;"> -->
+            <div class="modal-content forsted-bg-theme border-0 shadow-lg rounded-3"
+                style="max-width:500px; margin:auto;">
 
-            <form id="connectForm" name="connectForm" class="contact-form ajax-contact">
-                <!-- <h3 class="form-title">Do you have questions? Contact Us</h3> -->
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Name *" required>
+                <div class="modal-body p-4">
+                    <div class="modal-header border-0 pt-0">
+                        <h5 class="form-title text-black m-0">Enquire Now For Best Offer</h5>
+                        <button type="button" class="close text-black" data-bs-dismiss="modal" aria-label="Close"
+                            style="font-size:2rem; line-height:1; background:none; border:0;">
+                            &times;
+                        </button>
+
                     </div>
-                    <div class="form-group col-md-6">
-                        <input type="tel" class="form-control" name="number" id="number" placeholder="Phone *" required>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email Address *"
-                            required>
-                    </div>
-                    <div class="form-group col-md-12">
-                        <select name="subject" id="subject" class="orderby form-control" required>
-                            <option value="" disabled selected hidden>Select Subject</option>
-                            <option value="Apartment">Apartment</option>
-                            <option value="House">House</option>
-                            <option value="Villa">Villa</option>
-                            <option value="Land">Land</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-12">
-                        <textarea name="message" id="message" cols="30" rows="3" class="form-control"
-                            placeholder="Your Message"></textarea>
-                    </div>
-                    <div class="form-btn text-start col-12">
-                        <button type="submit" class="th-btn radius">Send message</button>
-                    </div>
+                    <!-- your exact form -->
+                    <form class="appointment-form " action="email.php" method="post">
+                        <div class="row">
+                            <div class="form-group style-border3 col-12 mb-3">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*"
+                                    required>
+                                <i class="fal fa-user"></i>
+                            </div>
+                            <div class="form-group style-border3 col-12 mb-3">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Your Email*" required>
+                                <i class="fal fa-envelope"></i>
+                            </div>
+                            <div class="form-group style-border3 col-12 mb-3">
+                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone*"
+                                    required>
+                                <i class="fal fa-phone"></i>
+                            </div>
+                            <div class="col-12 form-group style-border3 mb-3">
+                                <i class="far fa-comments"></i>
+                                <textarea placeholder="Type Your Message" name="message"
+                                    class="form-control"></textarea>
+                            </div>
+                            <input type="hidden" name="subject" value="Crown Enquiry">
+                            <!-- Add reCAPTCHA widget here -->
+                            <div class="g-recaptcha" data-sitekey="6LeKPt0rAAAAAGdCnZ_VEJqEr32QiEnoPKs2hcFE"
+                                style="margin-bottom:10px;"></div>
+                            <div class="col-12 form-btn">
+                                <button class="th-btn style-border" type="submit">
+                                    enquire for Best Offer
+                                    <span class="btn-icon"><img loading="lazy" src="../assets/img/icon/paper-plane.svg"
+                                            alt="img"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="form-messages mb-0 mt-3"></p>
+                    </form>
                 </div>
-                <p class="form-messages mb-0 mt-3"></p>
-            </form>
 
+            </div>
         </div>
     </div>
     <div class="scroll-top">
