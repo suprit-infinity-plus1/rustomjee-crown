@@ -50,6 +50,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 
 </head>
@@ -120,7 +122,7 @@
     </div>
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-            <div class="mobile-logo"><a href="index.html"><img src="assets2/img/brickstone-logo.png"
+            <div class="mobile-logo"><a href="index.html"><img src="assets2/img/logo/rustomjee-main-logo.png"
                         alt="Brick Stone html"></a></div>
             <div class="th-mobile-menu">
                 <ul>
@@ -133,7 +135,7 @@
                             <li><a href="blog.html">News</a></li>
                         </ul> -->
                     </li>
-                    <li class="menu-item-has-children"><a href="property.html">Properties</a>
+                    <li class="menu-item-has-children"><a href="#all-locations">Properties</a>
                         <ul class="sub-menu">
                             <li><a href="#all-locations">All Listings</a></li>
                             <li><a href="https://rustomjee.in.net/crown-prabhadevi/index.html">Prabhadevi</a></li>
@@ -148,9 +150,8 @@
                     </li>
 
 
-                    <li><a href="#testimonials">Testimonial</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#enquireModal">Contact
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#contact">Contact
                             Us</a></li>
                 </ul>
             </div>
@@ -212,7 +213,7 @@
                                             <li><a href="blog.html">News</a></li>
                                         </ul> -->
                                     </li>
-                                    <li class="menu-item-has-children"><a href="property.html">Properties</a>
+                                    <li class="menu-item-has-children"><a href="#all-locations">Properties</a>
                                         <ul class="sub-menu">
                                             <li><a href="#all-locations">All Listings</a></li>
                                             <li><a
@@ -235,13 +236,10 @@
                                                     Hill</a></li>
                                         </ul>
                                     </li>
-                                    <li class=""><a href="#testimonials">Testimonials</a>
-                                    </li>
-                                    <li><a href="privacy-policy.html">Privacy Policy</a>
+                                    <li class=""><a href="#why-us">Why Us</a>
 
                                     </li>
-                                    <li><a href="javascript:void(0)" data-bs-toggle="modal"
-                                            data-bs-target="#enquireModal">Contact Us</a></li>
+                                    <li><a href="#contact">Contact Us</a></li>
                                 </ul>
                             </nav><button type="button" class="th-menu-toggle d-block d-lg-none"><i
                                     class="far fa-bars"></i></button>
@@ -258,13 +256,11 @@
         </div>
     </header>
     <div class="th-hero-wrapper hero-1" id="hero">
-
         <div class="swiper th-slider" id="heroSlider1"
             data-slider-options='{"effect":"fade", "loop":true, "autoplay":false, "autoHeight": "false"}'>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="hero-inner hero-style1" data-bg-src="assets/img/prive/banner/l-1.png"
-                        style="transform: rotateY(180deg);">
+                    <div class="hero-inner hero-style1" data-bg-src="assets2/img/banner/l-1.jpg">
                         <!-- <img src="assets/img/prive/banner/l-1.png" alt=""> -->
                         <div class="container">
                             <div class="row gy-50 gx-40 align-items-center">
@@ -272,11 +268,14 @@
                                     <div class="hero-1-content pe-xl-4">
                                         <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">Create Your
                                             Story In a
-                                            <span class="title2 text-theme">Timeless Home</span>
+                                            <span class="title2 text-theme"
+                                                style="text-shadow: 1px 1px 2px rgba(0,0,0,0.9);">Timeless
+                                                Home</span>
                                         </h1>
                                         <div class="btn-group justify-content-center" data-ani="slideinup"
-                                            data-ani-delay="0.4s"><a href="property.html"
-                                                class="th-btn style2 pill">Explore Property</a></div>
+                                            data-ani-delay="0.4s"><a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#enquireModal" class="th-btn style2 pill">Explore
+                                                Property</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +283,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="hero-inner hero-style1" data-bg-src="projects/images/crescent/banner/2.png">
+                    <div class="hero-inner hero-style1" data-bg-src="assets2/img/banner/l-3.jpg">
                         <!-- <img src="projects/images/crescent/banner/2.png" alt=""> -->
                         <div class="container">
                             <div class="row gy-50 gx-40 align-items-center">
@@ -292,11 +291,13 @@
                                     <div class="hero-1-content pe-xl-4">
                                         <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">Live Where
                                             Comfort Meets
-                                            <span class="title2 text-theme">Sophistication</span>
+                                            <span class="title2 text-theme"
+                                                style="text-shadow: 1px 1px 2px rgba(0,0,0,0.9);">Sophistication</span>
                                         </h1>
                                         <div class="btn-group justify-content-center" data-ani="slideinup"
-                                            data-ani-delay="0.4s"><a href="property.html"
-                                                class="th-btn style2 pill">Explore Property</a></div>
+                                            data-ani-delay="0.4s"><a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#enquireModal" class="th-btn style2 pill">Explore
+                                                Property</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -304,65 +305,27 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="hero-inner hero-style1" data-bg-src="assets/img/prive/banner/l-3.png">
+                    <div class="hero-inner hero-style1" data-bg-src="assets2/img/banner/2.webp">
                         <!-- <img src="assets/img/prive/banner/l-3.png" alt=""> -->
                         <div class="container">
                             <div class="row gy-50 gx-40 align-items-center">
                                 <div class="col-xxl-7 col-xl-7 col-lg-8">
                                     <div class="hero-1-content pe-xl-4">
-                                        <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">Experience
-                                            Spaces That Define
-                                            <span class="title2 text-theme">Modern Living</span>
+                                        <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">Spaces That
+                                            Define
+                                            <span class="title2 text-theme"
+                                                style="text-shadow: 1px 1px 2px rgba(0,0,0,0.9);">Modern Living</span>
                                         </h1>
                                         <div class="btn-group justify-content-center" data-ani="slideinup"
-                                            data-ani-delay="0.4s"><a href="property.html"
-                                                class="th-btn style2 pill">Explore Property</a></div>
+                                            data-ani-delay="0.4s"><a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target="#enquireModal" class="th-btn style2 pill">Explore
+                                                Property</a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="hero-inner hero-style1" data-bg-src="projects/images/project-images/Bunglow_3.jpg">
-                        <!-- <img src="projects/images/project-images/Bunglow_3.jpg" alt=""> -->
-                        <div class="container">
-                            <div class="row gy-50 gx-40 align-items-center">
-                                <div class="col-xxl-7 col-xl-7 col-lg-8">
-                                    <div class="hero-1-content pe-xl-4">
-                                        <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">Experience
-                                            Spaces That Define
-                                            <span class="title2 text-theme">Modern Living</span>
-                                        </h1>
-                                        <div class="btn-group justify-content-center" data-ani="slideinup"
-                                            data-ani-delay="0.4s"><a href="property.html"
-                                                class="th-btn style2 pill">Explore Property</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="swiper-slide">
-                    <div class="hero-inner hero-style1" data-bg-src="assets/img/prive/banner/l-2.png">
-                        <div class="container">
-                            <div class="row gy-50 gx-40 align-items-center">
-                                <div class="col-xxl-7 col-xl-7 col-lg-8">
-                                    <div class="hero-1-content pe-xl-4">
-                                        <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">Discover a
-                                            Lifestyle Crafted by
-                                            <span class="title2 text-theme">Rustomjee</span>
-                                        </h1>
-                                        <div class="btn-group justify-content-center" data-ani="slideinup"
-                                            data-ani-delay="0.4s"><a href="property.html"
-                                                class="th-btn style2 pill">Explore Property</a></div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
             <div class="slider-pagination"></div>
             <div class="slider-pagination-wrapper"><button data-slider-prev="#heroSlider1"
@@ -374,13 +337,69 @@
         </div>
     </div>
 
+
+
+    <!-- =================== ABOUT US ========================= -->
+    <section id="about-us" class="space">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7">
+                    <div class="title-area text-center">
+                        <p class="sub-title fadeinup wow" data-wow-duration="1.5s" data-wow-delay="0.1s"><span
+                                class="double-line"></span>About Us</p>
+                        <h2 class="sec-title mb-2 fadeinup wow" data-wow-duration="1.5s" data-wow-delay="0.3s">Designed
+                            For Distinction</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+
+                <!-- Image Column -->
+                <div class="col-lg-6 mb-4 mb-md-0 text-center">
+                    <img src="assets/img/chembur/rustomjee-balmoral-gallery4.jpeg" alt="Rustomjee Crescent"
+                        class="img-fluid rounded shadow">
+                </div>
+                <!-- Text Column -->
+                <div class="col-lg-6">
+                    <!-- <h6 class="text-uppercase text-muted mb-2">About Us</h6>
+                    <h2 class="fw-bold mb-4">Rustomjee Crescent</h2> -->
+                    <p class="mb-4">
+                        Rustomjee has redefined the art of urban living through a legacy built on innovation, trust, and
+                        architectural excellence.
+                        With a vision that goes beyond construction, Rustomjee creates spaces that nurture community,
+                        inspire connection, and elevate everyday life.
+                        Every project embodies a deep understanding of how people live, blending functionality with
+                        beauty, and modern design with enduring craftsmanship.
+
+                        From serene residential enclaves to landmark commercial spaces, Rustomjee’s developments are
+                        shaped by a commitment to sustainability, thoughtful planning, and uncompromising quality.
+                        Each structure tells a story of purpose, precision, and passion where every detail
+                        contributes to an environment of refined comfort and timeless elegance.
+                        More than just creating buildings, Rustomjee is shaping lifestyles curating experiences where
+                        families grow, relationships flourish, and the spirit of home finds its truest meaning.
+                    </p>
+                    <!-- <div class="btn-group justify-content-center" data-ani="slideinup" data-ani-delay="0.4s"><a
+                            href="property.html" class="th-btn style2 pill">Explore Property</a></div> -->
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ================= All Properties ======================= -->
     <div id="all-locations" class="gallery-sec-1 overflow-hidden space overflow-hidden">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-7">
                     <div class="title-area text-center">
                         <p class="sub-title fadeinup wow" data-wow-duration="1.5s" data-wow-delay="0.1s"><span
-                                class="double-line"></span>Explore Cities</p>
+                                class="double-line"></span>Explore Properties</p>
                         <h2 class="sec-title mb-2 fadeinup wow" data-wow-duration="1.5s" data-wow-delay="0.3s">Explore
                             The Neighborhoods</h2>
                         <p class="box-text fadeinup wow" data-wow-duration="1.5s" data-wow-delay="0.5s">Find your dream
@@ -391,9 +410,6 @@
         </div>
         <div class="filter-menu indicator-active filter-menu-active justify-content-center fadeinup wow"
             data-wow-duration="1.5s" data-wow-delay="0.5s">
-
-            <button class="th-btn tab-btn active" type="button" onclick="window.location.href='all.html'">View
-                All</button>
             <button class="th-btn tab-btn" type="button"
                 onclick="window.location.href='https://rustomjee.in.net/crown-prabhadevi/index.html'">Prabhadevi</button>
             <button class="th-btn tab-btn" type="button"
@@ -425,9 +441,12 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide mumbai">
                             <div class="gallery-card">
-                                <div class="gallery-img img-shine"><img src="assets2/img/gallery/gallery-1-1.jpg"
+                                <div class="gallery-img img-shine"><img src="assets2/img/locations/prabhadevi.png"
                                         alt="gallery image">
                                     <div class="gallery-content">
+                                        <div class=" gallery-content-wrapper ">
+
+                                        </div>
                                         <div class="gallery-content-wrapper">
                                             <h2 class="box-title"><a
                                                     href="https://rustomjee.in.net/crown-prabhadevi/index.html">Prabhadevi</a>
@@ -437,9 +456,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide pune">
+                        <!-- <div class="swiper-slide pune">
                             <div class="gallery-card">
-                                <div class="gallery-img img-shine"><img src="assets2/img/gallery/gallery-1-2.jpg"
+                                <div class="gallery-img img-shine"><img src="assets2/img/locations/bkc.png"
                                         alt="gallery image">
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
@@ -452,7 +471,7 @@
                         </div>
                         <div class="swiper-slide bangalore">
                             <div class="gallery-card">
-                                <div class="gallery-img img-shine"><img src="assets2/img/gallery/gallery-1-3.jpg"
+                                <div class="gallery-img img-shine"><img src="assets2/img/locations/kasara.png"
                                         alt="gallery image">
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
@@ -466,7 +485,7 @@
                         </div>
                         <div class="swiper-slide goa">
                             <div class="gallery-card">
-                                <div class="gallery-img img-shine"><img src="assets2/img/gallery/gallery-1-4.jpg"
+                                <div class="gallery-img img-shine"><img src="assets2/img/locations/chembur.png"
                                         alt="gallery image">
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
@@ -480,7 +499,7 @@
                         </div>
                         <div class="swiper-slide noida">
                             <div class="gallery-card">
-                                <div class="gallery-img img-shine"><img src="assets2/img/gallery/gallery-1-5.jpg"
+                                <div class="gallery-img img-shine"><img src="assets2/img/locations/matunga.png"
                                         alt="gallery image">
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
@@ -494,7 +513,7 @@
                         </div>
                         <div class="swiper-slide gurgaon ">
                             <div class="gallery-card">
-                                <div class="gallery-img img-shine"><img src="assets2/img/gallery/gallery-1-6.jpg"
+                                <div class="gallery-img img-shine"><img src="assets2/img/locations/versova.png"
                                         alt="gallery image">
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
@@ -508,7 +527,7 @@
                         </div>
                         <div class="swiper-slide greece">
                             <div class="gallery-card">
-                                <div class="gallery-img img-shine"><img src="assets2/img/gallery/gallery-1-1.jpg"
+                                <div class="gallery-img img-shine"><img src="assets2/img/locations/pali-hill.png"
                                         alt="gallery image">
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
@@ -519,7 +538,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- <div class="swiper-slide thailand">
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/gallery/gallery-1-2.jpg"
@@ -1118,7 +1137,7 @@
                         <p class="sub-title fadeinup wow" data-wow-duration="1.5s" data-wow-delay="0.1s"><span
                                 class="double-line"></span> Why Choose Us</p>
                         <h2 class="sec-title text-white mb-0 fadeinup wow" data-wow-duration="1.5s"
-                            data-wow-delay="0.3s">Built on Trust and Excellence</h2>
+                            data-wow-delay="0.3s">Rustomjee - Built on Trust and Excellence</h2>
                     </div>
                 </div>
                 <div class="col-xl-auto">
@@ -1780,22 +1799,23 @@
             </div>
         </div>
     </section> -->
-    
-        <!--==============================
+
+    <!--==============================
 Appointment Area   
 ==============================-->
     <section id="contact">
-        <div class="space bg-title-dark overflow-hidden" id="contact-sec">
+        <div class="space  overflow-hidden" id="contact-sec">
             <div class="container">
                 <div class="row gx-60 align-items-center">
                     <div class="col-lg-5">
-                        <div class="appointment-thumb text-xl-end mb-lg-0 mb-50">
-                            <img loading="lazy" src="../assets/img/prive/amenities/amenities1.jpeg " alt="img">
+                        <div class="appointment-thumb text-center mb-lg-0 mb-50">
+                            <img loading="lazy" style="border-radius: 32px;"
+                                src="../assets/img/aminities/Tennis-Court.jpg" alt="img">
                         </div>
                     </div>
                     <div class="col-lg-7">
                         <div class="title-area mb-35">
-                            <h2 class="sec-title text-white">Enquire Now For Best Offer</h2>
+                            <h2 class="sec-title text-black">Enquire Now For Best Offer</h2>
                         </div>
                         <form action="email.php" method="POST" class="appointment-form me-xl-5">
                             <div class="row">
@@ -1816,15 +1836,17 @@ Appointment Area
                                 </div>
                                 <div class="col-12 form-group style-border3">
                                     <i class="far fa-comments"></i>
-                                    <textarea placeholder="Type Your Message" class="form-control"></textarea>
+                                    <textarea placeholder="Type Your Message" class="form-control"
+                                        name="message"></textarea>
                                 </div>
-                                <input type="hidden" name="subject" value="Prive Enquiry">
+                                <input type="hidden" name="subject" value="Rustomjee Enquiry">
                                 <!-- Add reCAPTCHA widget here -->
                                 <div class="g-recaptcha" data-sitekey="6LeKPt0rAAAAAGdCnZ_VEJqEr32QiEnoPKs2hcFE"
                                     style="margin-bottom:10px;"></div>
                                 <div class="col-12 form-btn mt-4">
-                                    <button class="th-btn style-border">Enquire Now <span class="btn-icon"><img
-                                                src="../assets/img/icon/paper-plane.svg" alt="img"></span></button>
+                                    <button class="th-btn style-border text-dark " style="border-radius: 30px;">Enquire
+                                        Now <span class="btn-icon"><img src="../assets/img/icon/paper-plane.svg"
+                                                alt="img"></span></button>
                                 </div>
                             </div>
                             <p class="form-messages mb-0 mt-3"></p>
@@ -1861,10 +1883,27 @@ Appointment Area
                                         <h3 class="widget_title">Properties</h3>
                                         <div class="menu-all-pages-container">
                                             <ul class="menu">
-                                                <li><a href="property.html">#Residential</a></li>
-                                                <li><a href="property.html">#Apartment</a></li>
-                                                <li><a href="property.html">#Condominium</a></li>
-                                                <li><a href="property.html">#Villa</a></li>
+                                                <li><a href="#all-locations">All Listings</a></li>
+                                                <li><a
+                                                        href="https://rustomjee.in.net/crown-prabhadevi/index.html">Prabhadevi</a>
+                                                </li>
+                                                <li><a href="https://rustomjee.in.net/prive-bkc/index.html'">BKC</a>
+                                                </li>
+                                                <li><a
+                                                        href="https://rustomjee.in.net/projects/belle-vue-kasara/index.html">Kasara</a>
+                                                </li>
+                                                <li><a
+                                                        href="https://rustomjee.in.net/balmoral-chembur/index.html">Chembur</a>
+                                                </li>
+                                                <li><a
+                                                        href="https://rustomjee.in.net/bayview-180-matunga/index.html">Matunga</a>
+                                                </li>
+                                                <li><a
+                                                        href="https://rustomjee.in.net/ocean-vista/index.html">Versova</a>
+                                                </li>
+                                                <li><a
+                                                        href="https://rustomjee.in.net/projects/crescent-pali-hill/index.html">Pali
+                                                        Hill</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1876,15 +1915,14 @@ Appointment Area
                                             <ul class="menu">
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="#about-us">About Us</a></li>
-                                                <li><a href="property.html">Properties</a></li>
-                                                <li><a href="#testimonials">Testimonial</a></li>
-                                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                                <li><a href="#contact-us">Contact Us</a></li>
+                                                <li><a href="#all-locations">Properties</a></li>
+                                                <li><a href="#why-us">Why Us</a></li>
+                                                <li><a href="#contact">Contact Us</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="footer-item">
+                                <!-- <div class="footer-item">
                                     <div class="widget widget_nav_menu footer-widget">
                                         <h3 class="widget_title">Support</h3>
                                         <div class="menu-all-pages-container">
@@ -1897,7 +1935,7 @@ Appointment Area
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="footer-all-widget-item">
                                     <div class="widget footer-widget">
@@ -1914,11 +1952,6 @@ Appointment Area
                                                     <p class="info-box_link"><a href="mailto: info@rustomjee.in.net">
                                                             info@rustomjee.in.net</a></p>
                                                 </div>
-                                                <div class="footer-info"><i class="fas fa-location-dot"></i>
-                                                    <p class="info-box_link"><span>22/F, 89 Lockhart Road, Wanchai, Hong
-                                                            Kong</span>
-                                                    </p>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1932,20 +1965,15 @@ Appointment Area
         <div class="copyright-wrap">
             <div class="container">
                 <div class="row gy-3 justify-content-lg-between justify-content-center align-items-center">
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2025 <a
-                                href="index.html">Brick Stone Realtors</a>. All Rights Reserved.</p>
+                                href="https://rustomjee.in.net/crown-prabhadevi/index.html">Rustomjee</a>. All Rights
+                            Reserved.</p>
                     </div>
-                    <div class="col-auto">
-                        <div class="footer-default-copy-right">
-                            <p>Social Media:</p>
-                            <div class="th-social"><a href="https://www.facebook.com/"><i
-                                        class="fab fa-facebook-f"></i></a> <a href="https://www.twitter.com/"><i
-                                        class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
-                                        class="fab fa-linkedin-in"></i></a> <a
-                                    href="https://api.whatsapp.com/send/?phone=+91%207700037581&text=I want to know about Rustomjee Properties"><i
-                                        class="fab fa-whatsapp"></i></a></div>
-                        </div>
+                    <div class="col-lg-6 text-end">
+                        <p class="copyright-text">
+                            Designed by <a href="https://sanjaresolutions.com/">Sanjar-E-Solutions</a></p>
+
                     </div>
                 </div>
             </div>
@@ -1993,12 +2021,12 @@ Appointment Area
                                 <textarea placeholder="Type Your Message" name="message"
                                     class="form-control"></textarea>
                             </div>
-                            <input type="hidden" name="subject" value="Crown Enquiry">
+                            <input type="hidden" name="subject" value="Rustomjee Enquiry">
                             <!-- Add reCAPTCHA widget here -->
                             <div class="g-recaptcha" data-sitekey="6LeKPt0rAAAAAGdCnZ_VEJqEr32QiEnoPKs2hcFE"
                                 style="margin-bottom:10px;"></div>
                             <div class="col-12 form-btn">
-                                <button class="th-btn style-border" type="submit">
+                                <button class="th-btn style-border text-dark" type="submit">
                                     enquire for Best Offer
                                     <span class="btn-icon"><img loading="lazy" src="../assets/img/icon/paper-plane.svg"
                                             alt="img"></span>
