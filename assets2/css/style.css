@@ -26116,7 +26116,6 @@ input {
     z-index: 3;
     padding: 20px
 }
-
 .gallery-card .gallery-content-wrapper:before {
     content: "";
     position: absolute;
@@ -26132,6 +26131,31 @@ input {
     -webkit-transition: .4s;
     transition: .4s
 }
+.gallery-card .gallery-content-offer-wrapper {
+    border-radius: 8px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    position: relative;
+    z-index: 3;
+    padding: 20px
+}
+.gallery-card .gallery-content-offer-wrapper:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white-color);
+    z-index: -1;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+
 
 .gallery-card .gallery-content {
     position: absolute;
