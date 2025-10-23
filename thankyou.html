@@ -1,80 +1,91 @@
-<!doctype html>
-<html class="no-js" lang="zxx" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Rustomjee - Prive BKC</title>
-    <meta name="author" content="Realar">
-    <meta name="description" content="Realar - Real Estate Apartment Complex HTML Template">
-    <meta name="keywords" content="Realar - Real Estate Apartment Complex HTML Template">
-    <meta name="robots" content="INDEX,FOLLOW">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank You – Rustomjee</title>
 
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Favicons - Place favicon.ico in the root directory -->
-    <!-- <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png"> -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/icon/rustomjee-favicon.png">
+    <!-- Google Font (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <link rel="manifest" href="../assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="../assets/img/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <style>
+        body {
+            background-color: #000;
+            /* Black background */
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-    <!--==============================
-	  Google Fonts
-	============================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
-        rel="stylesheet">
+        .thank-you-box {
+            text-align: center;
+            padding: 50px 40px;
+            background: #111;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+            max-width: 700px;
+            width: 100%;
+        }
 
-    <!--==============================
-	    All CSS File
-	============================== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <!-- Fontawesome Icon -->
-    <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="../assets/css/magnific-popup.min.css">
-    <!-- Swiper Js -->
-    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
-    <!-- datetimepicker -->
-    <link rel="stylesheet" href="../assets/css/jquery.datetimepicker.min.css">
-    <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+        .thank-you-box h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #f0b01a;
+        }
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        .thank-you-box p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-top: 15px;
+        }
+
+        .brand {
+            font-weight: 600;
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 35px;
+            text-decoration: none;
+            border: 2px solid #f0b01a;
+            padding: 12px 28px;
+            color: #f0b01a;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #f0b01a;
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
-    <section class="thank-page-section text-center py-5">
-        <div class="container">
-            <div class="thank-page-box p-5 rounded shadow">
-                <h1 class="thank-page-title mb-3">Thank You!</h1>
-                <p class="thank-page-message mb-4">
-                    Your submission has been received. We will get back to you shortly.
-                </p>
-                <a href="javascript:void(0);" onclick="history.go(-2);" class="btn thank-page-btn">
-                    Go Back
-                </a>
-            </div>
-        </div>
-    </section>
+
+    <div class="thank-you-box">
+        <div class="brand">Rustomjee</div>
+        <h1>Thank You!</h1>
+        <p>Your enquiry has been successfully submitted.</p>
+        <p>Our team will contact you shortly to assist with your request.</p>
+        <a href="index.html" class="back-link">← Go Back to Home</a>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
