@@ -26083,6 +26083,15 @@ input {
     opacity: 1;
     visibility: visible
 }
+/* .gallery-card .gallery-img:hover .offer-content-wrapper::before {
+    opacity: 1;
+    visibility: visible
+} */
+.gallery-card .gallery-img:hover .offer-content {
+    opacity: 1;
+    visibility: visible
+    
+}
 
 .gallery-card .gallery-img img {
     border-radius: 16px;
@@ -26104,7 +26113,7 @@ input {
 
 @media (max-width: 991px) {
     .gallery-card .gallery-img img {
-        border-radius: 0px
+        border-radius: 16px
     }
 }
 
@@ -26131,7 +26140,7 @@ input {
     -webkit-transition: .4s;
     transition: .4s
 }
-.gallery-card .gallery-content-offer-wrapper {
+.gallery-card .offer-content-wrapper {
     border-radius: 8px;
     -webkit-transition: .4s;
     transition: .4s;
@@ -26139,14 +26148,14 @@ input {
     z-index: 3;
     padding: 20px
 }
-.gallery-card .gallery-content-offer-wrapper:before {
+.gallery-card .offer-content-wrapper:before {
     content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: var(--white-color);
+    background: black;
     z-index: -1;
     border-radius: 8px;
     opacity: 0;
@@ -26172,6 +26181,24 @@ input {
     background-color: transparent;
     transition: .4s;
     z-index: 2
+}
+.gallery-card .offer-content {
+    position: absolute;
+    top: 20px;
+    width: 91%;
+    opacity: 1;
+    /* -webkit-transition: .4s;
+    transition: .4s; */
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    border-radius: 8px;
+    background-color: transparent;
+    transition: .4s;
+    z-index: 2;
+    visibility: hidden;
+    
 }
 
 .gallery-card .box-title {
