@@ -40,6 +40,8 @@
     <link rel="stylesheet" href="assets2/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets2/css/style.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
+
 
     <!-- Leaflet CSS + JS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -462,7 +464,7 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/bkc.png"
                                         alt="gallery image">
-                                        <div class="offer-content">
+                                    <div class="offer-content">
                                         <div class="offer-content-wrapper ">
                                             <img src="assets/img/offers/prive-off.png" class="overflow-hidden" alt="">
                                         </div>
@@ -480,7 +482,7 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/kasara.png"
                                         alt="gallery image">
-                                        <div class="offer-content">
+                                    <div class="offer-content">
                                         <div class="offer-content-wrapper ">
                                             <img src="assets/img/offers/belle-off.png" class="overflow-hidden" alt="">
                                         </div>
@@ -499,9 +501,10 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/chembur.png"
                                         alt="gallery image">
-                                        <div class="offer-content">
+                                    <div class="offer-content">
                                         <div class="offer-content-wrapper ">
-                                            <img src="assets/img/offers/balmoral-off.png" class="overflow-hidden" alt="">
+                                            <img src="assets/img/offers/balmoral-off.png" class="overflow-hidden"
+                                                alt="">
                                         </div>
                                     </div>
                                     <div class="gallery-content">
@@ -518,7 +521,7 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/matunga.png"
                                         alt="gallery image">
-                                        <div class="offer-content">
+                                    <div class="offer-content">
                                         <div class="offer-content-wrapper ">
                                             <img src="assets/img/offers/crown-off.png" class="overflow-hidden" alt="">
                                         </div>
@@ -537,7 +540,7 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/versova.jpg"
                                         alt="gallery image">
-                                        <div class="offer-content">
+                                    <div class="offer-content">
                                         <div class="offer-content-wrapper ">
                                             <img src="assets/img/offers/vista-off.png" class="overflow-hidden" alt="">
                                         </div>
@@ -556,9 +559,10 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/pali-hill.png"
                                         alt="gallery image">
-                                        <div class="offer-content">
+                                    <div class="offer-content">
                                         <div class="offer-content-wrapper ">
-                                            <img src="assets/img/offers/crescent-off.png" class="overflow-hidden" alt="">
+                                            <img src="assets/img/offers/crescent-off.png" class="overflow-hidden"
+                                                alt="">
                                         </div>
                                     </div>
                                     <div class="gallery-content">
@@ -571,7 +575,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- <div class="swiper-slide thailand">
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/gallery/gallery-1-2.jpg"
@@ -1976,9 +1980,12 @@ Appointment Area
                                             <p class="lets-connect">Lets Connect
                                             </p>
                                             <div class="footer-info-wrap">
-                                                <div class="footer-info"><a href="https://wa.me/917700037581?text=I%20want%20to%20know%20about%20Rustomjee%20Properties"><i class="fab fa-whatsapp"></i></a>
+                                                <div class="footer-info"><a
+                                                        href="https://wa.me/917700037581?text=I%20want%20to%20know%20about%20Rustomjee%20Properties"><i
+                                                            class="fab fa-whatsapp"></i></a>
                                                     <p class="info-box_link"><a
-                                                            href="https://wa.me/917700037581?text=I%20want%20to%20know%20about%20Rustomjee%20Properties">whatsapp</a></p>
+                                                            href="https://wa.me/917700037581?text=I%20want%20to%20know%20about%20Rustomjee%20Properties">whatsapp</a>
+                                                    </p>
                                                 </div>
                                                 <div class="footer-info"><i class="fas fa-envelope"></i>
                                                     <p class="info-box_link"><a href="mailto: info@rustomjee.in.net">
@@ -2081,8 +2088,8 @@ Appointment Area
     </div>
 
     <div class="whatsapp-float">
-        <a href="https://wa.me/917700037581?text=I%20want%20to%20know%20about%20Rustomjee%20Properties"
-            target="_blank" aria-label="Chat on WhatsApp">
+        <a href="https://wa.me/917700037581?text=I%20want%20to%20know%20about%20Rustomjee%20Properties" target="_blank"
+            aria-label="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
@@ -2097,6 +2104,7 @@ Appointment Area
     <script src="assets2/js/app.min.js"></script>
     <script src="assets2/js/wow.min.js"></script>
     <script src="assets2/js/nice-select.min.js"></script>
+
     <script src="assets2/js/main.js"></script>
     <script>
         new WOW().init();
@@ -2139,6 +2147,16 @@ Appointment Area
                 modal.style.display = "none";
             }
         };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"></script>
+    <script>
+        const input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            initialCountry: "in",
+            separateDialCode: true,
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"
+        });
     </script>
 
 </body>
