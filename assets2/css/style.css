@@ -26116,6 +26116,7 @@ input {
     z-index: 3;
     padding: 20px
 }
+
 .gallery-card .gallery-content-wrapper:before {
     content: "";
     position: absolute;
@@ -26131,6 +26132,7 @@ input {
     -webkit-transition: .4s;
     transition: .4s
 }
+
 .gallery-card .gallery-content-offer-wrapper {
     border-radius: 8px;
     -webkit-transition: .4s;
@@ -26139,6 +26141,7 @@ input {
     z-index: 3;
     padding: 20px
 }
+
 .gallery-card .gallery-content-offer-wrapper:before {
     content: "";
     position: absolute;
@@ -31166,4 +31169,8 @@ input {
     /* Darker red */
     box-shadow: -4px 0 12px rgba(255, 65, 54, 0.6);
     /* Soft red glow from left */
+}
+
+.iti {
+    width: 100%;
 }

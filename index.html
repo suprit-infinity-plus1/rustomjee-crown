@@ -41,6 +41,11 @@
     <link rel="stylesheet" href="assets2/css/style.css">
 
 
+    <!-- countrycode css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css" />
+
+
     <!-- Leaflet CSS + JS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -443,10 +448,12 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/prabhadevi.png"
                                         alt="gallery image">
-                                    <div class="gallery-content">
-                                        <div class=" gallery-content-wrapper ">
-
+                                    <div class="offer-content">
+                                        <div class="offer-content-wrapper ">
+                                            <img src="assets/img/offers/crown-off.png" class="overflow-hidden" alt="">
                                         </div>
+                                    </div>
+                                    <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
                                             <h2 class="box-title"><a
                                                     href="https://rustomjee.in.net/crown-prabhadevi/index.html">Prabhadevi</a>
@@ -456,10 +463,15 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="swiper-slide pune">
+                        <div class="swiper-slide pune">
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/bkc.png"
                                         alt="gallery image">
+                                    <div class="offer-content">
+                                        <div class="offer-content-wrapper ">
+                                            <img src="assets/img/offers/prive-off.png" class="overflow-hidden" alt="">
+                                        </div>
+                                    </div>
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
                                             <h2 class="box-title"><a
@@ -473,6 +485,11 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/kasara.png"
                                         alt="gallery image">
+                                    <div class="offer-content">
+                                        <div class="offer-content-wrapper ">
+                                            <img src="assets/img/offers/belle-off.png" class="overflow-hidden" alt="">
+                                        </div>
+                                    </div>
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
                                             <h2 class="box-title"><a
@@ -487,6 +504,12 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/chembur.png"
                                         alt="gallery image">
+                                    <div class="offer-content">
+                                        <div class="offer-content-wrapper ">
+                                            <img src="assets/img/offers/balmoral-off.png" class="overflow-hidden"
+                                                alt="">
+                                        </div>
+                                    </div>
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
                                             <h2 class="box-title"><a
@@ -501,6 +524,11 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/matunga.png"
                                         alt="gallery image">
+                                    <div class="offer-content">
+                                        <div class="offer-content-wrapper ">
+                                            <img src="assets/img/offers/crown-off.png" class="overflow-hidden" alt="">
+                                        </div>
+                                    </div>
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
                                             <h2 class="box-title"><a
@@ -513,8 +541,13 @@
                         </div>
                         <div class="swiper-slide gurgaon ">
                             <div class="gallery-card">
-                                <div class="gallery-img img-shine"><img src="assets2/img/locations/versova.png"
+                                <div class="gallery-img img-shine"><img src="assets2/img/locations/versova.jpg"
                                         alt="gallery image">
+                                    <div class="offer-content">
+                                        <div class="offer-content-wrapper ">
+                                            <img src="assets/img/offers/vista-off.png" class="overflow-hidden" alt="">
+                                        </div>
+                                    </div>
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
                                             <h2 class="box-title"><a
@@ -529,6 +562,12 @@
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/locations/pali-hill.png"
                                         alt="gallery image">
+                                    <div class="offer-content">
+                                        <div class="offer-content-wrapper ">
+                                            <img src="assets/img/offers/crescent-off.png" class="overflow-hidden"
+                                                alt="">
+                                        </div>
+                                    </div>
                                     <div class="gallery-content">
                                         <div class="gallery-content-wrapper">
                                             <h2 class="box-title"><a
@@ -538,7 +577,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
+
                         <!-- <div class="swiper-slide thailand">
                             <div class="gallery-card">
                                 <div class="gallery-img img-shine"><img src="assets2/img/gallery/gallery-1-2.jpg"
@@ -1830,8 +1870,11 @@ Appointment Area
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="form-group style-border3 col-md-12">
-                                    <input type="tel" class="form-control" name="phone" id="phone"
-                                        placeholder="Your Phone*">
+                                    <!--<input type="tel" class="form-control" name="phone" id="phone"-->
+                                    <!--    placeholder="Your Phone*">-->
+
+                                    <input type="tel" id="mobile_code" class="form-control" placeholder="Phone Number"
+                                        name="phone" />
                                     <i class="fal fa-phone"></i>
                                 </div>
                                 <div class="col-12 form-group style-border3">
@@ -2012,8 +2055,11 @@ Appointment Area
                                 <i class="fal fa-envelope"></i>
                             </div>
                             <div class="form-group style-border3 col-12 mb-3">
-                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone*"
-                                    required>
+                                <!--<input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone*"-->
+                                <!--    required>-->
+
+                                <input type="tel" id="mobile_code1" class="form-control" placeholder="Phone Number *"
+                                    name="phone" style="width: 100%" required />
                                 <i class="fal fa-phone"></i>
                             </div>
                             <div class="col-12 form-group style-border3 mb-3">
@@ -2066,6 +2112,24 @@ Appointment Area
     <script src="assets2/js/wow.min.js"></script>
     <script src="assets2/js/nice-select.min.js"></script>
     <script src="assets2/js/main.js"></script>
+
+    <!-- countrycode js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+
+    <script>
+        // -----Country Code Selection
+        $("#mobile_code").intlTelInput({
+            initialCountry: "in",
+            separateDialCode: true,
+            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+        });
+        $("#mobile_code1").intlTelInput({
+            initialCountry: "in",
+            separateDialCode: true,
+            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+        });
+    </script>
     <script>
         new WOW().init();
     </script>
