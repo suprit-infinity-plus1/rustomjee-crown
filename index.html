@@ -10,19 +10,6 @@
     <meta name="keywords" content="Brick Stone Realtors">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="57x57" href="assets2/img/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets2/img/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets2/img/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets2/img/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets2/img/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets2/img/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets2/img/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets2/img/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets2/img/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets2/img/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets2/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets2/img/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets2/img/favicons/favicon-16x16.png">
     <link rel="manifest" href="assets2/img/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
@@ -34,19 +21,15 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="css/animate.css">
+    <!-- <link rel="stylesheet" href="css/animate.css"> -->
 
     <link rel="stylesheet" href="assets2/css/app.min.css">
     <link rel="stylesheet" href="assets2/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets2/css/style.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css" />
-
-
     <!-- countrycode css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css" />
-
 
     <!-- Leaflet CSS + JS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -64,7 +47,7 @@
 </head>
 
 <body class="">
-    <div class="preloader"><button class="th-btn preloaderCls">Cancel Preloader</button>
+    <!-- <div class="preloader"><button class="th-btn preloaderCls">Cancel Preloader</button>
         <div id="preloader" class="preloader-inner">
             <div class="txt-loading">
                 <span data-text-preloader="R" class="letters-loading">R </span>
@@ -78,8 +61,8 @@
                 <span data-text-preloader="E" class="letters-loading">E</span>
             </div>
         </div>
-    </div>
-    <div class="sidemenu-wrapper sidemenu-cart d-none d-lg-block">
+    </div> -->
+    <!-- <div class="sidemenu-wrapper sidemenu-cart d-none d-lg-block">
         <div class="sidemenu-content"><button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
             <div class="widget woocommerce widget_shopping_cart">
                 <h3 class="widget_title">Shopping cart</h3>
@@ -122,7 +105,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="popup-search-box d-none d-lg-block"><button class="searchClose"><i class="fal fa-times"></i></button>
         <form action="#"><input type="text" placeholder="What are you looking for?"> <button type="submit"><i
                     class="fal fa-search"></i></button></form>
@@ -1857,18 +1840,18 @@ Appointment Area
                     </div>
                     <div class="col-lg-7">
                         <div class="title-area mb-35">
-                            <h2 class="sec-title text-black">Enquire Now For Best Offer</h2>
+                            <h2 class="sec-title text-black">Enquire Now For Best Offer1</h2>
                         </div>
-                        <form action="email.php" method="POST" class="appointment-form me-xl-5">
+                        <form action="email.php" id="contactUsForm" method="post" class="appointment-form me-xl-5">
                             <div class="row">
                                 <div class="form-group style-border3 col-md-6">
                                     <input type="text" class="form-control" name="name" id="name"
-                                        placeholder="Your Name*">
+                                        placeholder="Your Name*" required>
                                     <i class="fal fa-user"></i>
                                 </div>
                                 <div class="form-group style-border3 col-md-6">
                                     <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email*">
+                                        placeholder="Your Email">
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="form-group style-border3 col-md-12">
@@ -1876,8 +1859,9 @@ Appointment Area
                                     <!--    placeholder="Your Phone*">-->
 
                                     <input type="tel" id="mobile_code" class="form-control" placeholder="Phone Number"
-                                        name="phone" />
+                                        name="phone" required />
                                     <i class="fal fa-phone"></i>
+                                    <input type="hidden" name="dial_code" id="dial_code_1">
                                 </div>
                                 <div class="col-12 form-group style-border3">
                                     <i class="far fa-comments"></i>
@@ -1916,13 +1900,26 @@ Appointment Area
                                 <p class="about-text">At Rustomjee, every home is a harmony of elegance and openness
                                     spacious living that connects you effortlessly with nature.
                                 </p>
+                                <div class="footer-info-wrap">
+                                    <div class="footer-info"><a
+                                            href="https://wa.me/917700037581?text=I%20want%20to%20know%20about%20Rustomjee%20Properties"><i
+                                                class="fab fa-whatsapp"></i></a>
+                                        <p class="info-box_link"><a
+                                                href="https://wa.me/917700037581?text=I%20want%20to%20know%20about%20Rustomjee%20Properties">whatsapp</a>
+                                        </p>
+                                    </div>
+                                    <div class="footer-info"><i class="fas fa-envelope"></i>
+                                        <p class="info-box_link"><a href="mailto: info@rustomjee.in.net">
+                                                info@rustomjee.in.net</a></p>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
                     </div>
                     <div class="footer-all-widget-item">
                         <div class="footer-right-wrap">
-                            <div class="footer-item-wrap">
+                            <div class="footer-item-wrap gap-0">
                                 <div class="footer-item">
                                     <div class="widget widget_nav_menu footer-widget">
                                         <h3 class="widget_title">Properties</h3>
@@ -1937,6 +1934,17 @@ Appointment Area
                                                 <li><a
                                                         href="https://rustomjee.in.net/projects/belle-vue-kasara/index.html">Kasara</a>
                                                 </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer-item">
+                                    <div class="widget widget_nav_menu footer-widget">
+                                        <h3 class="widget_title d-none d-sm-block">
+                                            <pre class="m-0 p-0 bg-transparent"> </pre>
+                                        </h3>
+                                        <div class="menu-all-pages-container">
+                                            <ul class="menu">
                                                 <li><a
                                                         href="https://rustomjee.in.net/balmoral-chembur/index.html">Chembur</a>
                                                 </li>
@@ -1962,7 +1970,20 @@ Appointment Area
                                                 <li><a href="#about-us">About Us</a></li>
                                                 <li><a href="#all-locations">Properties</a></li>
                                                 <li><a href="#why-us">Why Us</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer-item">
+                                    <div class="widget widget_nav_menu footer-widget">
+                                        <h3 class="widget_title d-none d-sm-block">
+                                            <pre class="m-0 p-0 bg-transparent"> </pre>
+                                        </h3>
+                                        <div class="menu-all-pages-container">
+                                            <ul class="menu">
                                                 <li><a href="#contact">Contact Us</a></li>
+                                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                                <li><a href="terms-and-condition.html">Terms and Condition</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1982,27 +2003,26 @@ Appointment Area
                                     </div>
                                 </div> -->
 
-                                <div class="footer-all-widget-item">
+                                <!-- <div class="footer-all-widget-item">
                                     <div class="widget footer-widget">
                                         <div class="th-widget-about">
-                                            <p class="lets-connect">Lets Connect
+                                            <p class="lets-connect">Terms & Privacy
                                             </p>
                                             <div class="footer-info-wrap">
-                                                <div class="footer-info"><a
-                                                        href="https://wa.me/917700037581?text=I%20want%20to%20know%20about%20Rustomjee%20Properties"><i
-                                                            class="fab fa-whatsapp"></i></a>
+                                                <div class="footer-info">
+
                                                     <p class="info-box_link"><a
-                                                            href="https://wa.me/917700037581?text=I%20want%20to%20know%20about%20Rustomjee%20Properties">whatsapp</a>
+                                                            href="terms-and-condition.html">Terms and condition</a>
                                                     </p>
                                                 </div>
-                                                <div class="footer-info"><i class="fas fa-envelope"></i>
-                                                    <p class="info-box_link"><a href="mailto: info@rustomjee.in.net">
-                                                            info@rustomjee.in.net</a></p>
+                                                <div class="footer-info">
+                                                    <p class="info-box_link"><a href="privacy-policy.html">
+                                                            privacy Policy</a></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -2046,7 +2066,7 @@ Appointment Area
 
                     </div>
                     <!-- your exact form -->
-                    <form class="appointment-form " action="email.php" method="post">
+                    <form class="appointment-form" id="popupForm" action="email.php" method="post">
                         <div class="row">
                             <div class="form-group style-border3 col-12 mb-3">
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*"
@@ -2055,7 +2075,7 @@ Appointment Area
                             </div>
                             <div class="form-group style-border3 col-12 mb-3">
                                 <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Your Email*" required>
+                                    placeholder="Your Email">
                                 <i class="fal fa-envelope"></i>
                             </div>
                             <div class="form-group style-border3 col-12 mb-3">
@@ -2065,6 +2085,7 @@ Appointment Area
                                 <input type="tel" id="mobile_code1" class="form-control" placeholder="Phone Number *"
                                     name="phone" style="width: 100%" required />
                                 <i class="fal fa-phone"></i>
+                                <input type="hidden" name="dial_code" id="dial_code_2">
                             </div>
                             <div class="col-12 form-group style-border3 mb-3">
                                 <i class="far fa-comments"></i>
@@ -2115,25 +2136,77 @@ Appointment Area
     <script src="assets2/js/app.min.js"></script>
     <script src="assets2/js/wow.min.js"></script>
     <script src="assets2/js/nice-select.min.js"></script>
-
     <script src="assets2/js/main.js"></script>
 
-    <!-- countrycode js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+
+    <!-- Include the intl-tel-input JavaScript library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <!-- Include the utils script for formatting and validation (optional but recommended) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
 
     <script>
         // -----Country Code Selection
-        $("#mobile_code").intlTelInput({
-            initialCountry: "in",
-            separateDialCode: true,
-            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
-        });
-        $("#mobile_code1").intlTelInput({
-            initialCountry: "in",
-            separateDialCode: true,
-            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
-        });
+        // $("#mobile_code").intlTelInput({
+        //     initialCountry: "in",
+        //     separateDialCode: true,
+        //     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+        // });
+        // $("#mobile_code1").intlTelInput({
+        //     initialCountry: "in",
+        //     separateDialCode: true,
+        //     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+        // });
+
+        //           document.querySelector(".appointment-form").addEventListener("submit", function () {
+        //     // Get dial code directly from DOM
+        //     var dialCodeEl = document.querySelector(".iti__selected-dial-code");
+        //     var dialCode = dialCodeEl ? dialCodeEl.textContent.trim().replace('+', '') : '';
+        //     document.querySelector("#dial_code").value = dialCode;
+
+        //     // Clean up the phone number input
+        //     input.value = input.value.trim();
+        //   });
+        function setupIntlTel(inputId, formId, hiddenId) {
+            const phoneInputField = document.getElementById(inputId);
+            // const hiddenInput = document.getElementById(hiddenId);
+
+            if (!phoneInputField) return;
+
+            const phoneInput = window.intlTelInput(phoneInputField, {
+                // initialCountry: "in",
+                // separateDialCode: true,
+                // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+                autoPlaceDialCode: "polite",
+            });
+            document.querySelector(formId).addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const fullNumber = phoneInput.getNumber();
+                const isValid = phoneInput.isValidNumber();
+                const countryData = phoneInput.getSelectedCountryData();
+                const dialCode = countryData.dialCode;
+                // phoneInputField.value = fullNumber;
+                console.log("Full Number:", fullNumber);
+                console.log("dialCode:", dialCode);
+                console.log("Is Valid:", isValid);
+
+                if (!isValid) {
+                    const errorCode = phoneInput.getValidationError();
+                    console.log("Validation Error Code:", errorCode);
+                    // You can use a switch statement or if/else to map error codes to user-friendly messages
+                }
+                $(hiddenId).val(dialCode);
+                const hiddenVal = $(hiddenId).val();
+                console.log("Hidden Input Value:", hiddenVal);
+                this.submit(); // Now submit the form
+
+                // You can then send the fullNumber to your backend or perform other actions
+            });
+        }
+
+        // Initialize both forms
+        setupIntlTel("mobile_code", "#contactUsForm", '#dial_code_1');
+        setupIntlTel("mobile_code1", "#popupForm", '#dial_code_2');
     </script>
     <script>
         new WOW().init();
@@ -2160,14 +2233,14 @@ Appointment Area
 
     <script>
         // Open the modal on button click
-        document.getElementById("connectToggle").onclick = function () {
-            document.getElementById("connectModal").style.display = "block";
-        };
+        // document.getElementById("connectToggle").onclick = function () {
+        //     document.getElementById("connectModal").style.display = "block";
+        // };
 
-        // Close modal when clicking the X
-        document.querySelector(".close-modal").onclick = function () {
-            document.getElementById("connectModal").style.display = "none";
-        };
+        // // Close modal when clicking the X
+        // document.querySelector(".close-modal").onclick = function () {
+        //     document.getElementById("connectModal").style.display = "none";
+        // };
 
         // Close modal when clicking outside the modal content
         window.onclick = function (event) {
@@ -2176,16 +2249,6 @@ Appointment Area
                 modal.style.display = "none";
             }
         };
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"></script>
-    <script>
-        const input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            initialCountry: "in",
-            separateDialCode: true,
-            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"
-        });
     </script>
 
 </body>
