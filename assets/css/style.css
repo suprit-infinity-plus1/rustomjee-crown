@@ -44302,27 +44302,24 @@ span.select2-selection.select2-selection--single:focus {
   }
 } */
 
-.banner-text-position {
+.banner-text-position{
   display: flex;
   flex-direction: column;
   height: calc(100vh - 119px);
   justify-content: center;
   align-items: start;
 }
-
 @media (max-width: 991px) {
-  .banner-text-position {
+  .banner-text-position{
     justify-content: end;
   }
 }
-
 @media (min-width: 992px) {
 
-  .prive-banner-title {
+  .prive-banner-title{
     font-size: 50px;
   }
 }
-
 .vista-banner-title {
   text-align: start !important;
 }
@@ -44341,4 +44338,8 @@ span.select2-selection.select2-selection--single:focus {
   .prive-banner-title {
     text-align: center !important;
   }
+}
+
+.iti {
+    width: 100%;
 }

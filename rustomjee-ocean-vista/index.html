@@ -40,6 +40,9 @@
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
 
+    <!-- countrycode css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
@@ -1357,22 +1360,26 @@ Appointment Area
                         <div class="title-area mb-35">
                             <h2 class="sec-title text-white">Enquire Now</h2>
                         </div>
-                        <form action="../email.php" method="POST" class="appointment-form me-xl-5">
+                        <form action="../email.php" id="contactUsForm" method="POST" class="appointment-form me-xl-5">
                             <div class="row">
                                 <div class="form-group style-border3 col-md-6">
                                     <input type="text" class="form-control" name="name" id="name"
-                                        placeholder="Your Name*">
+                                        placeholder="Your Name*" required>
                                     <i class="fal fa-user"></i>
                                 </div>
                                 <div class="form-group style-border3 col-md-6">
                                     <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email*">
+                                        placeholder="Your Email">
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="form-group style-border3 col-md-12">
-                                    <input type="tel" class="form-control" name="phone" id="phone"
-                                        placeholder="Your Phone*">
+                                    <!--<input type="tel" class="form-control" name="phone" id="phone"-->
+                                    <!--    placeholder="Your Phone*">-->
+
+                                    <input type="tel" id="mobile_code" class="form-control" placeholder="Phone Number *"
+                                        name="phone" required />
                                     <i class="fal fa-phone"></i>
+                                    <input type="hidden" name="dial_code" id="dial_code_1">
                                 </div>
                                 <div class="col-12 form-group style-border3">
                                     <i class="far fa-comments"></i>
@@ -1699,21 +1706,26 @@ Appointment Area
 
                     </div>
                     <!-- your exact form -->
-                    <form class="appointment-form" action="../email.php" method="post">
+                    <form class="appointment-form" id="popupForm" action="../email.php" method="post">
                         <div class="row">
                             <div class="form-group style-border3 col-12 mb-3">
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*"
+                                    required>
                                 <i class="fal fa-user"></i>
                             </div>
                             <div class="form-group style-border3 col-12 mb-3">
                                 <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Your Email*">
+                                    placeholder="Your Email">
                                 <i class="fal fa-envelope"></i>
                             </div>
                             <div class="form-group style-border3 col-12 mb-3">
-                                <input type="tel" class="form-control" name="phone" id="phone"
-                                    placeholder="Your Phone*">
+                                <!--<input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone*"-->
+                                <!--    required>-->
+
+                                <input type="tel" id="mobile_code1" class="form-control" placeholder="Phone Number *"
+                                    name="phone" style="width: 100%" required />
                                 <i class="fal fa-phone"></i>
+                                <input type="hidden" name="dial_code" id="dial_code_2">
                             </div>
                             <div class="col-12 form-group style-border3 mb-3">
                                 <i class="far fa-comments"></i>
@@ -1796,6 +1808,55 @@ Appointment Area
     <script src="../assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <!-- countrycode js -->
+    <!-- Include the intl-tel-input JavaScript library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <!-- Include the utils script for formatting and validation (optional but recommended) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+    <script>
+        function setupIntlTel(inputId, formId, hiddenId) {
+            const phoneInputField = document.getElementById(inputId);
+            // const hiddenInput = document.getElementById(hiddenId);
+
+            if (!phoneInputField) return;
+
+            const phoneInput = window.intlTelInput(phoneInputField, {
+                // initialCountry: "in",
+                // separateDialCode: true,
+                // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+                autoPlaceDialCode: "polite",
+            });
+            document.querySelector(formId).addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const fullNumber = phoneInput.getNumber();
+                const isValid = phoneInput.isValidNumber();
+                const countryData = phoneInput.getSelectedCountryData();
+                const dialCode = countryData.dialCode;
+                // phoneInputField.value = fullNumber;
+                console.log("Full Number:", fullNumber);
+                console.log("dialCode:", dialCode);
+                console.log("Is Valid:", isValid);
+
+                if (!isValid) {
+                    const errorCode = phoneInput.getValidationError();
+                    console.log("Validation Error Code:", errorCode);
+                    // You can use a switch statement or if/else to map error codes to user-friendly messages
+                }
+                $(hiddenId).val(dialCode);
+                const hiddenVal = $(hiddenId).val();
+                console.log("Hidden Input Value:", hiddenVal);
+                this.submit(); // Now submit the form
+
+                // You can then send the fullNumber to your backend or perform other actions
+            });
+        }
+
+        // Initialize both forms
+        setupIntlTel("mobile_code", "#contactUsForm", '#dial_code_1');
+        setupIntlTel("mobile_code1", "#popupForm", '#dial_code_2');
+    </script>
 
     <script>
         $('[data-fancybox="gallery"]').fancybox({
