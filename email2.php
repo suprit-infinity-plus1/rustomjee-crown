@@ -1,122 +1,4 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- SweetAlert2 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
-<style>
-  body {
-    font-family: sans-serif;
-    text-align: center;
-  }
-
-  button {
-    background-color: cadetblue;
-    color: whitesmoke;
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 7px;
-    padding: 15px 35px;
-    cursor: pointer;
-    white-space: nowrap;
-    margin: 10px;
-  }
-
-  img {
-    width: 200px;
-  }
-
-  input[type="text"] {
-    padding: 12px 20px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
-
-  h1 {
-    border-bottom: solid 2px grey;
-  }
-
-  #success {
-    background: green;
-  }
-
-  #error {
-    background: red;
-  }
-
-  #warning {
-    background: coral;
-  }
-
-  #info {
-    background: cornflowerblue;
-  }
-
-  #question {
-    background: grey;
-  }
-</style>
-<button style="display:none" id="success">Success</button>
-
-
-
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-use PHPMailer\PHPMailer\PHPMailer;
-require 'vendor/autoload.php';
-require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require 'vendor/phpmailer/phpmailer/src/Exception.php';
-require 'vendor/phpmailer/phpmailer/src/SMTP.php';
-
-// Start session
-// session_start();
-
-// Check for reCAPTCHA response
-if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
-  $secretKey = "6LckGQIsAAAAAMlCSkr6GD-dJVBFuDPQsuASoFzS";
-  $ip = $_SERVER['REMOTE_ADDR'];
-  $response = $_POST['g-recaptcha-response'];
-  $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=$ip";
-  $fire = file_get_contents($url);
-  $data = json_decode($fire);
-  if ($data->success == true) {
-    // Initialize PHPMailer
-    $mail = new PHPMailer();
-    $mail->SMTPDebug = 0;
-    $mail->Host = "mail.rustomjee-mumbai.in";
-    $mail->Port = 465;
-    $mail->IsHTML(true);
-    // $mail->Username = 'info@rustomjee-mumbai.in';
-    // $mail->Password = 'VNGr?t1mG^JM'; 
-    $mail->setFrom('info@rustomjee-mumbai.in', 'crown');
-
-    // Add recipients
-    $mail->addBCC('sanjaresolutions@gmail.com', 'sanjaresolutions');
-    // $mail->addBCC('mirzafaizan1931@gmail.com', 'Faizan Mirza');
-
-    // $mail->addBCC('info_crown@rustomjee-mumbai.in', 'crown');
-    // $mail->addBCC('Info@brickstonerealtors.com', 'rustomjee');
-    $mail->addAddress(' supritdagade77@gmail.com', 'suprit');
-    // $mail->Subject = 'Contact form submitted data.';
-
-    // Gather form data
-
-    $_SESSION["redirection"] = "done";
-    $name = ($_POST['name'] != '') ? $_POST['name'] : '';
-    $email = ($_POST['email'] != '') ? $_POST['email'] : '';
-    // $phone = ($_POST['phone'] != '') ? $_POST['phone'] : '';
-    // $message = $_POST['message'] ?? '';
-    // $subject = $_POST['subject'] ?? 'Property Enquiry form submited';
-
-    // $mail->Subject = "Contact form submission: " . $subject;
-
-    $dial_code = $_POST['dial_code'] ?? '';
+$dial_code = $_POST['dial_code'] ?? '';
 $phone = $_POST['phone'] ?? '';
 $full_phone = '+' . $dial_code . ' ' . $phone;
     $message = $_POST['message'] ?? '';
@@ -124,6 +6,16 @@ $full_phone = '+' . $dial_code . ' ' . $phone;
 
     $mail->Subject = "Contact form submission: " . $subject;
     
+    // Debug (optional)
+echo "<pre>";
+print_r([
+  'Name' => $name,
+  'Email' => $email,
+  'Code' => $dial_code,
+  'Full Phone' => $full_phone,
+  'Message' => $message
+]);
+die;
 
     // Prepare email content
     $html = "  
@@ -233,6 +125,6 @@ $full_phone = '+' . $dial_code . ' ' . $phone;
 <script>
   $('body').click(function () {
     // window.location = "https://  .com/demo";
-    window.location = "https://rustomjee-mumbai.in/thankyou.html";
+    window.location = "https://rustomjee.in.net/thankyou.html";
   });
 </script>
