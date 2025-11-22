@@ -26050,7 +26050,7 @@ input {
     z-index: 2
 }
 
-.gallery-card .gallery-img::before {
+/* .gallery-card .gallery-img::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -26063,7 +26063,8 @@ input {
     -webkit-transition: .4s;
     transition: .4s;
     z-index: 1
-}
+} */
+
 
 .gallery-card .gallery-img:hover .gallery-content .box-text {
     color: var(--title-color)
