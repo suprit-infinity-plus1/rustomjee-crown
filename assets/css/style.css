@@ -44364,9 +44364,23 @@ span.select2-selection.select2-selection--single:focus {
   letter-spacing: 8px;
   font-weight: 300;
 }
+.header-logo-title-ten {
+  font-size: 28px;
+  color: black;
+  font-family: sans-serif;
+  letter-spacing: 6px;
+  font-weight: 300;
+}
 .header-logo-title-five {
   font-size: 40px;
   color: white;
+  font-family: sans-serif;
+  letter-spacing: 12px;
+  font-weight: 300;
+}
+.header-logo-title-five-black {
+  font-size: 40px;
+  color: black;
   font-family: sans-serif;
   letter-spacing: 12px;
   font-weight: 300;
@@ -44375,6 +44389,14 @@ span.select2-selection.select2-selection--single:focus {
 .header-logo-subtitle {
   font-size: 18px;
   color: white;
+}
+.header-logo-subtitle-black {
+  font-size: 18px;
+  color: black;
+}
+.header-logo-subtitle-ten {
+  font-size: 18px;
+  color: black;
 }
 
 #gallery .widget-banner {
