@@ -117,8 +117,8 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
     // $mail->Subject = "Contact form submission: " . $subject;
 
     $dial_code = $_POST['dial_code'] ?? '';
-$phone = $_POST['phone'] ?? '';
-$full_phone = '+' . $dial_code . ' ' . $phone;
+    $phone = $_POST['phone'] ?? '';
+    $full_phone = '+' . $dial_code . ' ' . $phone;
     $message = $_POST['message'] ?? '';
     $subject = $_POST['subject'] ?? 'Property Enquiry form submited';
 

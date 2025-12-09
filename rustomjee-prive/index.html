@@ -1253,8 +1253,11 @@ Appointment Area
                         <div class="title-area mb-35">
                             <h2 class="sec-title text-white">Enquire Now For Best Offer</h2>
                         </div>
-                        <form action="../email.php" id="contactUsForm" method="POST" class="appointment-form me-xl-5">
+                        <form action="../email3.php" id="contactUsForm" method="POST" class="appointment-form me-xl-5">
                             <div class="row">
+                                <!-- Honeypot Anti-Bot Field -->
+                                <input type="text" name="website" style="display:none !important;" tabindex="-1"
+                                    autocomplete="off">
                                 <div class="form-group style-border3 col-md-6">
                                     <input type="text" class="form-control" name="name" id="name"
                                         placeholder="Your Name*" required>
@@ -1590,8 +1593,11 @@ Appointment Area
 
                     </div>
                     <!-- your exact form -->
-                    <form class="appointment-form" id="popupForm" action="../email.php" method="post">
+                    <form class="appointment-form" id="popupForm" action="../email3.php" method="post">
                         <div class="row">
+                            <!-- Honeypot Anti-Bot Field -->
+                            <input type="text" name="website" style="display:none !important;" tabindex="-1"
+                                autocomplete="off">
                             <div class="form-group style-border3 col-12 mb-3">
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*"
                                     required>
@@ -1815,6 +1821,29 @@ Appointment Area
             }
         });
 
+    </script>
+
+    <!-- ======================================= -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        const url = new URL(window.location.href);
+        const status = url.searchParams.get("status");
+        const msg = url.searchParams.get("msg");
+
+        if (status && msg) {
+            Swal.fire({
+                title: status === "success" ? "Success!" : "Error!",
+                html: msg,
+                icon: status,
+                confirmButtonColor: "#3085d6"
+            });
+
+            // Remove parameters from URL after popup
+            window.history.replaceState({}, document.title, "/");
+        }
     </script>
 
 </body>
