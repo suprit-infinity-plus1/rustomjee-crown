@@ -104,7 +104,11 @@
             <button class="th-menu-toggle bg-title-dark"><i class="fal fa-times"></i></button>
             <div class="mobile-logo bg-title-dark">
                 <a href="index.html">
-                    <img src="../assets/img/prive/prive-logo-white.png" alt="Realar">
+                    <!-- <img src="../assets/img/prive/prive-logo-white.png" alt="Realar"> -->
+                    <div class="header-logo-main-container">
+                        <div class="header-logo-title-five-black" style="color: white;">PRIVE</div>
+                        <div class="header-logo-subtitle-black" style="color: white;">BKC</div>
+                    </div>
                 </a>
             </div>
             <div class="th-mobile-menu">
@@ -157,7 +161,13 @@
                         <div class="col-auto">
                             <div class="header-logo">
                                 <a href="index.html">
-                                    <img src="../assets/img/prive/rustomjeeprive-logo.png" alt="Realar">
+                                    <!-- <img src="../assets/img/prive/rustomjeeprive-logo.png" alt="Realar"> -->
+                                    <div class="header-logo-main-container">
+                                        <div class="header-logo-title-five-black" style="font-size: 36px;">PRIVE
+                                        </div>
+                                        <div class="header-logo-subtitle-black" style="font-size: 22px;">BKC
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -1243,16 +1253,19 @@ Appointment Area
                         <div class="title-area mb-35">
                             <h2 class="sec-title text-white">Enquire Now For Best Offer</h2>
                         </div>
-                        <form action="../email.php" method="POST" class="appointment-form me-xl-5">
+                        <form action="../email3.php" id="contactUsForm" method="POST" class="appointment-form me-xl-5">
                             <div class="row">
+                                <!-- Honeypot Anti-Bot Field -->
+                                <input type="text" name="website" style="display:none !important;" tabindex="-1"
+                                    autocomplete="off">
                                 <div class="form-group style-border3 col-md-6">
                                     <input type="text" class="form-control" name="name" id="name"
-                                        placeholder="Your Name*">
+                                        placeholder="Your Name*" required>
                                     <i class="fal fa-user"></i>
                                 </div>
                                 <div class="form-group style-border3 col-md-6">
                                     <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email*">
+                                        placeholder="Your Email">
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="form-group style-border3 col-md-12">
@@ -1260,8 +1273,9 @@ Appointment Area
                                     <!--    placeholder="Your Phone*">-->
 
                                     <input type="tel" id="mobile_code" class="form-control" placeholder="Phone Number"
-                                        name="phone" />
+                                        name="phone" required />
                                     <i class="fal fa-phone"></i>
+                                    <input type="hidden" name="dial_code" id="dial_code_1">
                                 </div>
                                 <div class="col-12 form-group style-border3">
                                     <i class="far fa-comments"></i>
@@ -1270,7 +1284,7 @@ Appointment Area
                                 </div>
                                 <input type="hidden" name="subject" value="Prive Enquiry">
                                 <!-- Add reCAPTCHA widget here -->
-                                <div class="g-recaptcha" data-sitekey="6LeKPt0rAAAAAGdCnZ_VEJqEr32QiEnoPKs2hcFE"
+                                <div class="g-recaptcha" data-sitekey="6LckGQIsAAAAAHj-aq8TCk4QFXOzHeGrzUsotJS6"
                                     style="margin-bottom:10px;"></div>
                                 <div class="col-12 form-btn mt-4">
                                     <button class="th-btn style-border">Enquire Now <span class="btn-icon"><img
@@ -1429,8 +1443,13 @@ Appointment Area
                             <div class="widget footer-widget">
                                 <div class="th-widget-about">
                                     <div class="about-logo">
-                                        <a href="index.html"><img loading="lazy"
-                                                src="../assets/img/prive/rustomjeeprive-logo.png" alt="Realar"></a>
+                                        <a href="index.html">
+                                            <!-- <img loading="lazy" src="../assets/img/prive/rustomjeeprive-logo.png" alt="Realar"> -->
+                                            <div class="header-logo-main-container">
+                                                <div class="header-logo-title-five-black">PRIVE</div>
+                                                <div class="header-logo-subtitle-black">BKC</div>
+                                            </div>
+                                        </a>
                                     </div>
                                     <p class="about-text text-dark">
                                         Discover Rustomjee Prive BKC – a landmark address offering luxurious residences,
@@ -1477,17 +1496,17 @@ Appointment Area
                                                     class="info-box_link">whatsapp</a></p>
                                         </div>
                                     </div>
-                                    <div class="info-box_text"><a href="mailto:info@rustomjee.in.net">
+                                    <!-- <div class="info-box_text"><a href="mailto:info@rustomjee-mumbai.in">
                                             <div class="icon">
                                                 <img loading="lazy" src="../assets/img/icon/envelope.svg" alt="img">
                                             </div>
                                         </a>
                                         <div class="details my-auto">
-                                            <p class="text-dark"><a href="mailto:info@rustomjee.in.net"
-                                                    class="info-box_link">info@rustomjee.in.net</a>
+                                            <p class="text-dark"><a href="mailto:info@rustomjee-mumbai.in"
+                                                    class="info-box_link">info@rustomjee-mumbai.in</a>
                                             </p>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -1513,10 +1532,11 @@ Appointment Area
                                 <div class="menu-all-pages-container">
                                     <ul class="menu">
                                         <li><a href="#gallery" class="text-dark">Gallery</a></li>
-                                        <li><a href="#map" class="text-dark">FAQ</a></li>
                                         <li><a href="#why-choose-us" class="text-dark">Why Choose Us</a></li>
-                                        <li><a href="#map" class="text-dark">Map</a></li>
                                         <li><a href="#contact" class="text-dark">Contact Us</a></li>
+                                        <li><a class="text-dark" href="../privacy-policy.html">Privacy Policy</a></li>
+                                        <li><a class="text-dark" href="../terms-and-condition.html">Terms and
+                                                Conditions</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1573,15 +1593,19 @@ Appointment Area
 
                     </div>
                     <!-- your exact form -->
-                    <form class="appointment-form" action="../email.php" method="post">
+                    <form class="appointment-form" id="popupForm" action="../email3.php" method="post">
                         <div class="row">
+                            <!-- Honeypot Anti-Bot Field -->
+                            <input type="text" name="website" style="display:none !important;" tabindex="-1"
+                                autocomplete="off">
                             <div class="form-group style-border3 col-12 mb-3">
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*"
+                                    required>
                                 <i class="fal fa-user"></i>
                             </div>
                             <div class="form-group style-border3 col-12 mb-3">
                                 <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Your Email*">
+                                    placeholder="Your Email">
                                 <i class="fal fa-envelope"></i>
                             </div>
                             <div class="form-group style-border3 col-12 mb-3">
@@ -1591,6 +1615,7 @@ Appointment Area
                                 <input type="tel" id="mobile_code1" class="form-control" placeholder="Phone Number *"
                                     name="phone" style="width: 100%" required />
                                 <i class="fal fa-phone"></i>
+                                <input type="hidden" name="dial_code" id="dial_code_2">
                             </div>
                             <div class="col-12 form-group style-border3 mb-3">
                                 <i class="far fa-comments"></i>
@@ -1599,7 +1624,7 @@ Appointment Area
                             </div>
                             <input type="hidden" name="subject" value="Prive Enquiry">
                             <!-- Add reCAPTCHA widget here -->
-                            <div class="g-recaptcha" data-sitekey="6LeKPt0rAAAAAGdCnZ_VEJqEr32QiEnoPKs2hcFE"
+                            <div class="g-recaptcha" data-sitekey="6LckGQIsAAAAAHj-aq8TCk4QFXOzHeGrzUsotJS6"
                                 style="margin-bottom:10px;"></div>
                             <div class="col-12 form-btn">
                                 <button class="th-btn style-border">
@@ -1673,23 +1698,54 @@ Appointment Area
     <script src="../assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
     <!-- countrycode js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+    <!-- Include the intl-tel-input JavaScript library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <!-- Include the utils script for formatting and validation (optional but recommended) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
 
     <script>
-        // -----Country Code Selection
-        $("#mobile_code").intlTelInput({
-            initialCountry: "in",
-            separateDialCode: true,
-            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
-        });
-        $("#mobile_code1").intlTelInput({
-            initialCountry: "in",
-            separateDialCode: true,
-            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
-        });
+        function setupIntlTel(inputId, formId, hiddenId) {
+            const phoneInputField = document.getElementById(inputId);
+            // const hiddenInput = document.getElementById(hiddenId);
+
+            if (!phoneInputField) return;
+
+            const phoneInput = window.intlTelInput(phoneInputField, {
+                // initialCountry: "in",
+                // separateDialCode: true,
+                // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+                autoPlaceDialCode: "polite",
+            });
+            document.querySelector(formId).addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                const fullNumber = phoneInput.getNumber();
+                const isValid = phoneInput.isValidNumber();
+                const countryData = phoneInput.getSelectedCountryData();
+                const dialCode = countryData.dialCode;
+                // phoneInputField.value = fullNumber;
+                console.log("Full Number:", fullNumber);
+                console.log("dialCode:", dialCode);
+                console.log("Is Valid:", isValid);
+
+                if (!isValid) {
+                    const errorCode = phoneInput.getValidationError();
+                    console.log("Validation Error Code:", errorCode);
+                    // You can use a switch statement or if/else to map error codes to user-friendly messages
+                }
+                $(hiddenId).val(dialCode);
+                const hiddenVal = $(hiddenId).val();
+                console.log("Hidden Input Value:", hiddenVal);
+                this.submit(); // Now submit the form
+
+                // You can then send the fullNumber to your backend or perform other actions
+            });
+        }
+
+        // Initialize both forms
+        setupIntlTel("mobile_code", "#contactUsForm", '#dial_code_1');
+        setupIntlTel("mobile_code1", "#popupForm", '#dial_code_2');
     </script>
 
     <script>
@@ -1765,6 +1821,29 @@ Appointment Area
             }
         });
 
+    </script>
+
+    <!-- ======================================= -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        const url = new URL(window.location.href);
+        const status = url.searchParams.get("status");
+        const msg = url.searchParams.get("msg");
+
+        if (status && msg) {
+            Swal.fire({
+                title: status === "success" ? "Success!" : "Error!",
+                html: msg,
+                icon: status,
+                confirmButtonColor: "#3085d6"
+            });
+
+            // Remove parameters from URL after popup
+            window.history.replaceState({}, document.title, "/");
+        }
     </script>
 
 </body>

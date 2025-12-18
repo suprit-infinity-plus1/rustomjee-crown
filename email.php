@@ -79,7 +79,7 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 
 // Check for reCAPTCHA response
 if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
-  $secretKey = "6LeKPt0rAAAAANYefJJ0xXFB-OSrqt_8KX3yDPwQ";
+  $secretKey = "6LckGQIsAAAAAMlCSkr6GD-dJVBFuDPQsuASoFzS";
   $ip = $_SERVER['REMOTE_ADDR'];
   $response = $_POST['g-recaptcha-response'];
   $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$response&remoteip=$ip";
@@ -89,20 +89,20 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
     // Initialize PHPMailer
     $mail = new PHPMailer();
     $mail->SMTPDebug = 0;
-    $mail->Host = "mail.rustomjee.in.net";
+    $mail->Host = "mail.rustomjee-mumbai.in";
     $mail->Port = 465;
     $mail->IsHTML(true);
-    // $mail->Username = 'info@rustomjee.in.net';
+    // $mail->Username = 'info@rustomjee-mumbai.in';
     // $mail->Password = 'VNGr?t1mG^JM'; 
-    $mail->setFrom('info@rustomjee.in.net', 'crown');
+    $mail->setFrom('info@rustomjee-mumbai.in', 'crown');
 
     // Add recipients
     $mail->addBCC('sanjaresolutions@gmail.com', 'sanjaresolutions');
     // $mail->addBCC('mirzafaizan1931@gmail.com', 'Faizan Mirza');
 
-    // $mail->addBCC('info_crown@rustomjee.in.net', 'crown');
-    $mail->addBCC('info@rustomjee.in.net', 'rustomjee');
-    // $mail->addAddress(' supritdagade77@gmail.com', 'suprit');
+    // $mail->addBCC('info_crown@rustomjee-mumbai.in', 'crown');
+    // $mail->addBCC('Info@brickstonerealtors.com', 'rustomjee');
+    $mail->addAddress(' supritdagade77@gmail.com', 'suprit');
     // $mail->Subject = 'Contact form submitted data.';
 
     // Gather form data
@@ -110,11 +110,20 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
     $_SESSION["redirection"] = "done";
     $name = ($_POST['name'] != '') ? $_POST['name'] : '';
     $email = ($_POST['email'] != '') ? $_POST['email'] : '';
-    $phone = ($_POST['phone'] != '') ? $_POST['phone'] : '';
+    // $phone = ($_POST['phone'] != '') ? $_POST['phone'] : '';
+    // $message = $_POST['message'] ?? '';
+    // $subject = $_POST['subject'] ?? 'Property Enquiry form submited';
+
+    // $mail->Subject = "Contact form submission: " . $subject;
+
+    $dial_code = $_POST['dial_code'] ?? '';
+    $phone = $_POST['phone'] ?? '';
+    $full_phone = '+' . $dial_code . ' ' . $phone;
     $message = $_POST['message'] ?? '';
     $subject = $_POST['subject'] ?? 'Property Enquiry form submited';
 
     $mail->Subject = "Contact form submission: " . $subject;
+    
 
     // Prepare email content
     $html = "  
@@ -142,7 +151,7 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
       $html .= "     <th style='width: 20%;border: 2px solid black;'>" . $email . "</th>";
     }
     if (!empty($phone)) {
-      $html .= "     <th style='width: 20%;border: 2px solid black;'>" . $phone . "</th>";
+      $html .= "     <th style='width: 20%;border: 2px solid black;'>" . $full_phone . "</th>";
     }
     if (!empty($message)) {
       $html .= "     <th style='width: 20%;border: 2px solid black;'>" . $message . "</th>";
@@ -158,7 +167,7 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
       CURLOPT_POST => 1,
       CURLOPT_POSTFIELDS => array(
         'name' => $name,
-        'contact' => $phone,
+        'contact' => $full_phone,
         'message' => $message,
         'email' => $email,
         'extra' => $subject,
@@ -224,6 +233,6 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
 <script>
   $('body').click(function () {
     // window.location = "https://  .com/demo";
-    window.location = "https://rustomjee.in.net/crown-prabhadevi/index.html";
+    window.location = "https://rustomjee-mumbai.in/thankyou.html";
   });
 </script>

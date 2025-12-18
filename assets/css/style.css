@@ -8606,14 +8606,14 @@ a.text-theme:hover,
 }
 
 .widget_banner {
-  padding: 70px 60px;
+  /* padding: 70px 60px; */
   border-radius: 8px;
   overflow: hidden;
   position: relative;
   z-index: 1;
 }
 
-.widget_banner:after {
+/* .widget_banner:after {
   content: '';
   position: absolute;
   inset: 32px;
@@ -8622,7 +8622,7 @@ a.text-theme:hover,
   -webkit-backdrop-filter: blur(11.6px);
   backdrop-filter: blur(11.6px);
   z-index: -1;
-}
+} */
 
 .widget_banner .title {
   font-size: 24px;
@@ -9100,7 +9100,7 @@ ol.wp-block-rss {
   }
 
   .widget_banner {
-    padding: 60px 50px;
+    /* padding: 60px 50px; */
   }
 
   .widget_banner:after {
@@ -44345,4 +44345,63 @@ span.select2-selection.select2-selection--single:focus {
 
 .iti {
   width: 100%;
+}
+
+/* ------------------- Logo Text ------------------- */
+
+.header-logo-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-logo-title-eight {
+  font-size: 34px;
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 8px;
+  font-weight: 300;
+}
+.header-logo-title-ten {
+  font-size: 28px;
+  color: black;
+  font-family: sans-serif;
+  letter-spacing: 6px;
+  font-weight: 300;
+}
+.header-logo-title-five {
+  font-size: 40px;
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 12px;
+  font-weight: 300;
+}
+.header-logo-title-five-black {
+  font-size: 40px;
+  color: black;
+  font-family: sans-serif;
+  letter-spacing: 12px;
+  font-weight: 300;
+}
+
+.header-logo-subtitle {
+  font-size: 18px;
+  color: white;
+}
+.header-logo-subtitle-black {
+  font-size: 18px;
+  color: black;
+}
+.header-logo-subtitle-ten {
+  font-size: 18px;
+  color: black;
+}
+
+#gallery .widget-banner {
+  background-color: rgba(28, 45, 55, 0.6);
+  backdrop-filter: blur(11.6px);
+  padding: 40px 0;
+  border-radius: 10px;
 }
