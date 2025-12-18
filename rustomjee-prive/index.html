@@ -1826,25 +1826,6 @@ Appointment Area
     <!-- ======================================= -->
 
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script>
-        const url = new URL(window.location.href);
-        const status = url.searchParams.get("status");
-        const msg = url.searchParams.get("msg");
-
-        if (status && msg) {
-            Swal.fire({
-                title: status === "success" ? "Success!" : "Error!",
-                html: msg,
-                icon: status,
-                confirmButtonColor: "#3085d6"
-            });
-
-            // Remove parameters from URL after popup
-            window.history.replaceState({}, document.title, "/");
-        }
-    </script>
 
 </body>
 

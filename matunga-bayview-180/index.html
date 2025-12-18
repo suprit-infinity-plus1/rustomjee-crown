@@ -2157,8 +2157,11 @@ contact Area
                     <div class="col-lg-5">
                         <div class="appointment-wrap2 bg-theme me-xxl-5">
                             <h2 class="form-title text-white">Enquire Now For Best Offer</h2>
-                            <form class="appointment-form" id="contactUsForm" action="email.php" method="post">
+                            <form class="appointment-form" id="contactUsForm" action="../email3.php" method="post">
                                 <div class="row">
+                                    <!-- Honeypot Anti-Bot Field -->
+                                    <input type="text" name="website" style="display:none !important;" tabindex="-1"
+                                        autocomplete="off">
                                     <div class="form-group style-border3 col-12">
                                         <input type="text" class="form-control" name="name" id="name"
                                             placeholder="Your Name*" required>
@@ -2465,8 +2468,11 @@ map Area
 
                     </div>
                     <!-- your exact form -->
-                    <form class="appointment-form " id="popupForm" action="email.php" method="post">
+                    <form class="appointment-form " id="popupForm" action="../email3.php" method="post">
                         <div class="row">
+                            <!-- Honeypot Anti-Bot Field -->
+                            <input type="text" name="website" style="display:none !important;" tabindex="-1"
+                                autocomplete="off">
                             <div class="form-group style-border3 col-12 mb-3">
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*"
                                     required>

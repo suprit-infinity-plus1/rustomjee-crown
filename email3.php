@@ -189,7 +189,7 @@ try {
     $mail->addCustomHeader('MIME-Version: 1.0');
 
     $mail->setFrom('info@rustomjee-mumbai.in', 'Rustomjee');
-    $mail->addAddress('siddiquimahfooz327@gmail.com', 'mahfooz');
+    $mail->addAddress('sanjaresolutions@gmail.com', 'SanjareSolutions');
     $mail->addBCC('supritdagade77@gmail.com');
 
     $mail->isHTML(true);
