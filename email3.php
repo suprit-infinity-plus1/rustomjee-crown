@@ -10,7 +10,7 @@ require 'vendor/autoload.php';
 // ===================================================
 function goHome($status, $msg) {
     $msg = urlencode($msg);
-    header("Location: https://rustomjee-mumbai.in/?status=$status&msg=$msg");
+    header("Location: https://mumbaiproperties.co.in/?status=$status&msg=$msg");
     exit;
 }
 
@@ -133,7 +133,7 @@ $html = '
         </h2>
 
         <p style="color:#333; margin-top:0; font-size:15px;">
-            You received a new enquiry from <b>rustomjee-mumbai.in</b>.
+            You received a new enquiry from <b>mumbaiproperties.co.in</b>.
         </p>
 
         <table style="width:100%; border-collapse:collapse; margin-top:20px;">
